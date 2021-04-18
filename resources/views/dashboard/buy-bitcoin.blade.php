@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ICO Trade</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/back/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/back/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/back/css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/back/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/back/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/back/img/favicon.ico">
+    <!-- Tweaks for older IEs-->
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="search-panel">
+          <div class="search-inner d-flex align-items-center justify-content-center">
+            <div class="close-btn">Close <i class="fa fa-close"></i></div>
+
+          </div>
+        </div>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+          <div class="navbar-header">
+            <!-- Navbar Header--><a href="index.html" class="navbar-brand">
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">ICO</strong><strong>Trade</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">I</strong><strong>C</strong></div></a>
+            <!-- Sidebar Toggle Btn-->
+            <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+          </div>
+          <div class="right-menu list-inline no-margin-bottom">
+
+            <!-- Log out               -->
+            <div class="list-inline-item logout">
+              <a class="dropdown-item" href="https://www.icomarkettrading.com/logout"
+                  onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+                <i class="icon-logout"></i>Logout
+                    </a>
+
+                <form id="logout-form" action="https://www.icomarkettrading.com/logout" method="POST" style="display: none;">
+                <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">              </form>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+
+          <div class="title">
+            <h1 class="h5">T S</h1>
+            <p>
+                                              Pending
+                                            </p>
+          </div>
+        </div>
+               <ul class="list-unstyled">
+          <li class="active"><a href="https://www.icomarkettrading.com/home"> <i class="icon-home"></i>Home </a></li>
+          <li><a href="https://www.icomarkettrading.com/sell-bitcoin"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
+          <li><a href="https://www.icomarkettrading.com/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
+        <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li>
+        <li><a href="https://www.icomarkettrading.com/withdrawal"> <i class="fa fa-money"></i>Withdraw</a>
+          <li><a href="https://www.icomarkettrading.com/wallet"> <i class="fa fa-money"></i>Fund Wallet</a>
+          </li>
+        </ul>
+                      </nav>
+    <div class="page-content">
+
+      <main>
+
+
+
+                  <div class="page-header">
+  <div class="container-fluid">
+    <h2 class="h5 no-margin-bottom">Buy Bitcoin</h2>
+  </div>
+</div>
+<div>
+
+
+    </div><section class="no-padding-top no-padding-bottom">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-primary" role="alert">
+            <h2>Steps To Follow To Buy Bitcoin from Us</h2><hr>
+            <ol>
+                <li>Fill in your details below</li>
+                <li>Make sure you have some money in your wallet</li>
+                <li>Once confirmed by us we will credit your Bitcoin Wallet</li>
+            </ol>
+          </div>
+    <form action="https://www.icomarkettrading.com/buy-bitcoin" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Amount</label>
+        <input type="text" name="amount" class="form-control" required autocomplete="amount">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Wallet Name</label>
+        <input type="text" name="wallet_name" class="form-control" required autocomplete="bank_name">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Wallet Address</label>
+        <input type="text" name="hash_key" class="form-control" required autocomplete="account_number">
+    </div>
+
+    <div class="form-group">
+    <input type="hidden" name="user_id" value="72" class="form-control">
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary"> BUY </button>
+    </div>
+    </form>
+</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__block block no-margin-bottom">
+    <div class="container-fluid text-center">
+      <p class="no-margin-bottom">2020 &copy; ICO Trade. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+      </main>
+    </div>
+    </div>
+    <script src="/back/vendor/jquery/jquery.min.js"></script>
+    <script src="/back/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="/back/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/back/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="/back/vendor/chart.js/Chart.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="/back/js/charts-home.js"></script>
+    <script src="/back/js/front.js"></script>
+    <script>
+      var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+
+      jQuery.ajax({
+          url: "https://min-api.cryptocompare.com/data/pricemulti",
+          data: "fsyms=BTC,ETH,DASH,LTC&tsyms=USD",
+          dataType: 'json',
+      }).done(function(data) {
+          jQuery("#dashCoin").html('$' + data.DASH.USD);
+          jQuery("#ethCoin").html('$' + data.ETH.USD);
+          jQuery("#btc").html('$' + data.BTC.USD);
+          jQuery("#liteCoin").html('$' + data.LTC.USD);
+      }).fail(function() {
+          console.log("API error");
+      });
+  </script>
+  </body>
+</html>
