@@ -20,7 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard/withdraw', 'DashboardController@index');
+Route::get('/withdraw', 'DashboardController@index');
+Route::get('/sell-crypto', 'DashboardController@sellcrypto');
+Route::get('/buy-bitcoin', 'DashboardController@buybitcoin');
 Route::get('/welcome', function() {
     return view('welcome');
 });
