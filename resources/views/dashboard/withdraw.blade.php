@@ -155,7 +155,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="/back/js/charts-home.js"></script>
-    <script src="/back/js/front.js"></script>
+    <script src="/js/plug/front.js"></script>
     <script>
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',

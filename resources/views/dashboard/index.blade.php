@@ -11,15 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="/back/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/plug/bootstrap.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="/back/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/plug/fontAwesome.css">
     <!-- Custom Font Icons CSS-->
-    <link rel="stylesheet" href="/back/css/font.css">
+    <link rel="stylesheet" href="/css/plug/font.css">
     <!-- Google fonts - Muli-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/back/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="/css/plug/default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="/back/css/custom.css">
     <!-- Favicon-->
