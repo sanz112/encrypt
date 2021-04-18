@@ -75,12 +75,11 @@
           </div>
         </div>
                <ul class="list-unstyled">
-          <li class="active"><a href="https://www.icomarkettrading.com/home"> <i class="icon-home"></i>Home </a></li>
-          <li><a href="https://www.icomarkettrading.com/sell-bitcoin"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
-          <li><a href="https://www.icomarkettrading.com/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
-        {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
-        <li><a href="https://www.icomarkettrading.com/withdrawal"> <i class="fa fa-money"></i>Withdraw</a>
-          {{-- <li><a href="https://www.icomarkettrading.com/wallet"> <i class="fa fa-money"></i>Fund Wallet</a> --}}
+                <li class="active"><a href="/dashboard"> <i class="icon-home"></i>Home </a></li>
+                <li><a href="/dashboard/sell-crypto"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
+                <li><a href="/dashboard/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
+              {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
+              <li><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
           </li>
         </ul>
                       </nav>

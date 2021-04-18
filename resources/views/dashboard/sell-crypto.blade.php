@@ -40,8 +40,8 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
             <!-- Navbar Header--><a href="index.html" class="navbar-brand">
-              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">ICO</strong><strong>Trade</strong></div>
-              <div class="brand-text brand-sm"><strong class="text-primary">I</strong><strong>C</strong></div></a>
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Bomex</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">B</strong><strong>M</strong></div></a>
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>
@@ -68,19 +68,18 @@
         <div class="sidebar-header d-flex align-items-center">
 
           <div class="title">
-            <h1 class="h5">T S</h1>
+            <h1 class="h5"></h1>
             <p>
                                               Pending
                                             </p>
           </div>
         </div>
                <ul class="list-unstyled">
-          <li class="active"><a href="https://www.icomarkettrading.com/home"> <i class="icon-home"></i>Home </a></li>
-          <li><a href="https://www.icomarkettrading.com/sell-bitcoin"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
-          <li><a href="https://www.icomarkettrading.com/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
-        <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li>
-        <li><a href="https://www.icomarkettrading.com/withdrawal"> <i class="fa fa-money"></i>Withdraw</a>
-          <li><a href="https://www.icomarkettrading.com/wallet"> <i class="fa fa-money"></i>Fund Wallet</a>
+                <li class="active"><a href="/dashboard"> <i class="icon-home"></i>Home </a></li>
+                <li><a href="/dashboard/sell-crypto"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
+                <li><a href="/dashboard/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
+              {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
+              <li><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
           </li>
         </ul>
                       </nav>
