@@ -19,10 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/withdraw', 'DashboardController@index');
-Route::get('/sell-crypto', 'DashboardController@sellcrypto');
-Route::get('/buy-bitcoin', 'DashboardController@buybitcoin');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('dashboard/withdraw', 'DashboardController@withdraw');
+Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
+Route::get('dashboard/buy-bitcoin', 'DashboardController@buybitcoin');
 Route::get('/welcome', function() {
     return view('welcome');
 });

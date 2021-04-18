@@ -4,22 +4,22 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ICO Trade</title>
+    <title>Bomex</title>
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
+    {{-- <meta name="csrf-token" content="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD"> --}}
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="/back/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/plug/bootstrap.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="/back/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/plug/fontAwesome.css">
     <!-- Custom Font Icons CSS-->
-    <link rel="stylesheet" href="/back/css/font.css">
+    <link rel="stylesheet" href="/css/plug/font.css">
     <!-- Google fonts - Muli-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/back/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="/css/plug/default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="/back/css/custom.css">
     <!-- Favicon-->
@@ -29,7 +29,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   </head>
   <body>
-    <header class="header">
+          <header class="header">
       <nav class="navbar navbar-expand-lg">
         <div class="search-panel">
           <div class="search-inner d-flex align-items-center justify-content-center">
@@ -147,15 +147,16 @@
       </main>
     </div>
     </div>
-    <script src="/back/vendor/jquery/jquery.min.js"></script>
-    <script src="/back/vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="/back/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/back/vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="/back/vendor/chart.js/Chart.min.js"></script>
+    <script src="/js/plug/jquery.min.js"></script>
+    <script src="/js/plug/popper.js"> </script>
+    <script src="/js/plug/bootstrap.js"></script>
+    <script src="/js/plug/cookie.js"> </script>
+    <script src="/js/plug/chrt.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="/back/js/charts-home.js"></script>
+    <script src="/js/plug/validate.js"></script>
+    <script src="/js/plug/chart.js"></script>
     <script src="/js/plug/front.js"></script>
+    <script>
     <script>
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',

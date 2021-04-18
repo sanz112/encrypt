@@ -11,7 +11,13 @@ class DashboardController extends Controller
         $this->middleware('auth');
     }
 
-    public function withdwaw() {
+
+    public function index() {
+        return view('dashboard.index');
+    }
+
+
+    public function withdraw() {
         return view('dashboard.withdraw');
     }
 
