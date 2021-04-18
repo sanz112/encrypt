@@ -56,7 +56,8 @@
                     </a>
 
                 <form id="logout-form" action="https://www.icomarkettrading.com/logout" method="POST" style="display: none;">
-                <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">              </form>
+                @csrf
+                </form>
               </div>
           </div>
         </div>
@@ -78,9 +79,9 @@
           <li class="active"><a href="https://www.icomarkettrading.com/home"> <i class="icon-home"></i>Home </a></li>
           <li><a href="https://www.icomarkettrading.com/sell-bitcoin"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
           <li><a href="https://www.icomarkettrading.com/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
-        <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li>
+        {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
         <li><a href="https://www.icomarkettrading.com/withdrawal"> <i class="fa fa-money"></i>Withdraw</a>
-          <li><a href="https://www.icomarkettrading.com/wallet"> <i class="fa fa-money"></i>Fund Wallet</a>
+          {{-- <li><a href="https://www.icomarkettrading.com/wallet"> <i class="fa fa-money"></i>Fund Wallet</a> --}}
           </li>
         </ul>
                       </nav>
