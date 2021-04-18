@@ -152,15 +152,15 @@
       </main>
     </div>
     </div>
-    <script src="/back/vendor/jquery/jquery.min.js"></script>
-    <script src="/back/vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="/back/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/back/vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="/back/vendor/chart.js/Chart.min.js"></script>
+    <script src="/js/plug/jquery.min.js"></script>
+    <script src="/js/plug/popper.js"> </script>
+    <script src="/js/plug/bootstrap.js"></script>
+    <script src="/js/plug/cookie.js"> </script>
+    <script src="/js/plug/chrt.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="/back/js/charts-home.js"></script>
-    <script src="/back/js/front.js"></script>
+    <script src="/js/plug/validate.js"></script>
+    <script src="/js/plug/chart.js"></script>
+    <script src="/js/plug/front.js"></script>
     <script>
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',

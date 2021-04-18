@@ -40,8 +40,8 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
             <!-- Navbar Header--><a href="index.html" class="navbar-brand">
-              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">ICO</strong><strong>Trade</strong></div>
-              <div class="brand-text brand-sm"><strong class="text-primary">I</strong><strong>C</strong></div></a>
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Bomex</strong></div>
+              <div class="brand-text brand-sm"><strong class="text-primary">B</strong><strong>M</strong></div></a>
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>
@@ -139,22 +139,22 @@
 <footer class="footer">
   <div class="footer__block block no-margin-bottom">
     <div class="container-fluid text-center">
-      <p class="no-margin-bottom">2020 &copy; ICO Trade. All Rights Reserved.</p>
+      <p class="no-margin-bottom">2021 &copy; Bomex Trade. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
       </main>
     </div>
     </div>
-    <script src="/back/vendor/jquery/jquery.min.js"></script>
-    <script src="/back/vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="/back/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/back/vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="/back/vendor/chart.js/Chart.min.js"></script>
+    <script src="/js/plug/jquery.min.js"></script>
+    <script src="/js/plug/popper.js"> </script>
+    <script src="/js/plug/bootstrap.js"></script>
+    <script src="/js/plug/cookie.js"> </script>
+    <script src="/js/plug/chrt.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="/back/js/charts-home.js"></script>
-    <script src="/back/js/front.js"></script>
+    <script src="/js/plug/validate.js"></script>
+    <script src="/js/plug/chart.js"></script>
+    <script src="/js/plug/front.js"></script>
     <script>
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
