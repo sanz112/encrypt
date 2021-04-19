@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bomex</title>
+    <title>RealCapitalAssets</title>
     <!-- CSRF Token -->
     {{-- <meta name="csrf-token" content="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD"> --}}
     <meta name="description" content="">
@@ -14,7 +14,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Bomex') }}</title>
+    <title>{{ config('app.name', 'RealCapitalAssets') }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/plug/bootstrap.css') }}">
     <!-- Font Awesome CSS-->
@@ -45,7 +45,7 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
             <!-- Navbar Header--><a href="{{ url('/') }}" class="navbar-brand">
-              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary"> {{ config('app.name', 'Bomex') }}</strong></div>
+              <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary"> {{ config('app.name', 'RealCapitalAssets') }}</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">R</strong><strong>A</strong></div></a>
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
@@ -55,7 +55,7 @@
             <!-- Log out               -->
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a style="color: fff;" class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
@@ -68,3 +68,10 @@
         </div>
       </nav>
     </header>
+
+    <main>
+        @yield('content')
+    </main>
+</div>
+</body>
+</html>
