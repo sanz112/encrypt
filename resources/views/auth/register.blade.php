@@ -24,6 +24,7 @@
 <div class="container">
     <div style="height: 100%;margin:7% 0 0 0;" class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8">
+            <h4 class="text-center">RealCapitalAssets</h4>
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
