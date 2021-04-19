@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Bomex - Responsive HTML 5 template</title>
+        <title>Realcapitalassets/title>
         <!-- mobile responsive meta -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -38,7 +39,8 @@
             <div class="navbar-header">
                 <button style="color: #fff !important" type="button" class="navbar-toggle collapsed bitmex-icon-menu" data-toggle="collapse" data-target=".main-navigation" aria-expanded="false"> </button>
                 <a class="navbar-brand" href="#">
-                    <img src="img/logonew.png" alt="Awesome Image"/>
+                    {{-- <img src="img/logonew.png" alt="Awesome Image"/> --}}
+                    RealCapitalAssets
                 </a>
             </div>
 
@@ -194,7 +196,7 @@
 				<div class="about-style-one-content">
 					<span>Learn about us</span>
 					<h3>About Bitcoin</h3>
-					<p>At Bomex we have profesional Forex Traders who will use their professional expertice to help you trade your Cryptocurrency in the stock market and make profits from %10 monthly, The more you invest the more profit you earn per day.</p>
+					<p>At Realcapitalassets we have profesional Forex Traders who will use their professional expertice to help you trade your Cryptocurrency in the stock market and make profits from %10 monthly, The more you invest the more profit you earn per day.</p>
 					<a href="/dashboard" class="thm-btn yellow-bg-hvr">Get Started</a>
 				</div><!-- /.about-style-one-content -->
 			</div><!-- /.col-md-6 -->
@@ -480,19 +482,19 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="Bomext-accordion">
+          <div class="Realcapitalassetst-accordion">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
                   <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      What is Bomex Trade ?
+                      What is Realcapitalassets Trade ?
                     </a>
                   </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
-                    Bomex is a group of profesional forex traders that helps you trade you Cryptocurrency at the stock market and expect profits from %15 bper day, we also buy and sell cryptocurrency to whoever needs it.
+                    Realcapitalassets is a group of profesional forex traders that helps you trade you Cryptocurrency at the stock market and expect profits from %15 bper day, we also buy and sell cryptocurrency to whoever needs it.
                   </div>
                 </div>
               </div>
@@ -514,7 +516,7 @@
                 <div class="panel-heading" role="tab" id="headingThree">
                   <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Does Bomex charge any fee?
+                      Does Realcapitalassets charge any fee?
                     </a>
                   </h4>
                 </div>
@@ -528,13 +530,13 @@
                 <div class="panel-heading" role="tab" id="headingFour">
                   <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Is Bomex like MLM or affiliate marketting?
+                      Is Realcapitalassets like MLM or affiliate marketting?
                     </a>
                   </h4>
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                   <div class="panel-body">
-                    Bomex is a leading forex trading platform, which makes it different from MLM or Affiliate Marketting, you make significant earnings with a small investment..
+                    Realcapitalassets is a leading forex trading platform, which makes it different from MLM or Affiliate Marketting, you make significant earnings with a small investment..
                   </div>
                 </div>
               </div>
@@ -634,7 +636,7 @@
 <div class="footer-bottom">
 	<div class="thm-container clearfix">
 		<div class="pull-left copy-text">
-			<p>&copy; 2021 Bomex All copy rights are reserved. Powered by Witt<span style="color: plum;">Stack</span></p>
+			<p>&copy; 2021 Realcapitalassets All copy rights are reserved. Powered by Witt<span style="color: plum;">Stack</span></p>
 		</div><!-- /.pull-left copy-text -->
 		<div class="social pull-right">
         	<a href="#" class="fa fa-twitter"></a><!--
@@ -660,7 +662,7 @@
 <section class="hidden-sidebar side-navigation">
     <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
     <div class="sidebar-content">
-        <h3>Bomex</h3>
+        <h3>Realcapitalassets</h3>
         <p>You can reach us on any of this </p>
         <p class="contact-info">Inquiry@bitcoin.com <br /> +2348134567865 </p><!-- /.contact-info -->
         <div class="social">
@@ -688,12 +690,12 @@
 }
     .bg-color-2 {
   background-color: #061949; }
-  .bg-color-2 .Bomext-accordion .panel {
+  .bg-color-2 .Realcapitalassetst-accordion .panel {
     background-color: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.05); }
-    .bg-color-2 .Bomext-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
+    .bg-color-2 .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
       border-color: rgba(255, 255, 255, 0.05); }
-    .bg-color-2 .Bomext-accordion .panel .panel-body {
+    .bg-color-2 .Realcapitalassetst-accordion .panel .panel-body {
       color: #7695b5; }
   .bg-color-2 .panel-default > .panel-heading {
     color: #ffffff; !important }
@@ -780,46 +782,46 @@
   background-image: linear-gradient(to right, #f87a46, #feb933);
 } */
 
-.Bomext-accordion .panel .panel-heading {
+.Realcapitalassetst-accordion .panel .panel-heading {
   border: 0;
   background: transparent;
   padding: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.Bomext-accordion .panel .panel-heading .panel-title a {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a {
   padding: 30px 30px 30px 60px;
   display: block;
   position: relative;
 }
-.Bomext-accordion .panel .panel-heading .panel-title a:before {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a:before {
   font-family: FontAwesome;
   left: 30px;
   position: absolute;
 }
-.Bomext-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.Bomext-accordion .panel .panel-heading .panel-title a[aria-expanded=true]:before {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true]:before {
   content: "\f106";
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
-.Bomext-accordion .panel .panel-heading .panel-title a[aria-expanded=false] {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false] {
   border-bottom: 0;
 }
-.Bomext-accordion .panel .panel-heading .panel-title a[aria-expanded=false]:before {
+.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false]:before {
   content: "\f106";
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
-.Bomext-accordion .panel .panel-collapse .panel-body {
+.Realcapitalassetst-accordion .panel .panel-collapse .panel-body {
   border-top: 0;
   padding: 30px 60px;
 }
-.Bomext-accordion .panel + .panel {
+.Realcapitalassetst-accordion .panel + .panel {
   margin-top: 0;
 }
 
