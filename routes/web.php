@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('dashboard/withdraw', 'DashboardController@withdraw');
@@ -26,6 +29,13 @@ Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
 Route::get('dashboard/buy-bitcoin', 'DashboardController@buybitcoin');
 Route::get('/welcome', function() {
     return view('welcome');
+});
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', 'Admin\DashboardController@registerUser');
+    Route::get('/user-edit/{id}', 'Admin\DashboardController@editUser');
+    Route::patch('/updateusers/{id}', 'Admin\DashboardController@updateUser');
+    Route::delete('/deleteusers/{id}', 'Admin\DashboardController@deleteUser');
 });
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 

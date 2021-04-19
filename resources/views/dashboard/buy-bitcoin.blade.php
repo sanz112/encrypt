@@ -8,19 +8,23 @@
         <div class="sidebar-header d-flex align-items-center">
 
           <div class="title">
-            <h1 class="h5">T S</h1>
-            <p>
+            <h1 class="h5">{{ Auth::user()->username }}</h1>
+            {{-- <p>
                                               Pending
-                                            </p>
+                                            </p> --}}
           </div>
         </div>
                <ul class="list-unstyled">
-                <li class="active"><a href="/dashboard"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="/dashboard/sell-crypto"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
-                <li><a href="/dashboard/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
+                <li class="{{ 'dashboard' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard"> <i class="icon-home"></i>Home </a></li>
+                <li class="{{ 'dashboard/sell-crypto' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/sell-crypto"> <i class="fa fa-btc"></i>Sell Bitcoin </a></li>
+                <li class="{{ 'dashboard/buy-bitcoin' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
               {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
-              <li><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
-          </li>
+              <li class="{{ 'dashboard/withdraw' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
+              </li>
+              @if (Auth::user()->usertype == "ADMIN")
+                 <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}"><a href="/admin"> <i class="fa fa-money"></i>Admin Page</a> </li>
+             @endif
+
         </ul>
                       </nav>
     <div class="page-content">
@@ -79,12 +83,35 @@
 <footer class="footer">
   <div class="footer__block block no-margin-bottom">
     <div class="container-fluid text-center">
-      <p class="no-margin-bottom">2021 &copy; Realcapitalassets Trade. All Rights Reserved.</p>
+      <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
     </div>
     </div>
+    <style>
+        .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 1px 2px 2px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+</style>
+<a href="https://api.whatsapp.com/send?phone=19784641094&amp;text=Good%20Day." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
     <script src="/js/plug/jquery.min.js"></script>
     <script src="/js/plug/popper.js"> </script>
     <script src="/js/plug/bootstrap.js"></script>

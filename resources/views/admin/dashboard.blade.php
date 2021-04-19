@@ -20,75 +20,108 @@
             <li class="{{ 'dashboard/buy-bitcoin' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/buy-bitcoin"> <i class="fa fa-bitcoin"></i>Buy Bitcoin </a></li>
           {{-- <li><a href="https://www.icomarkettrading.com/plan"> <i class="fa fa-bar-chart"></i>Forex Trade</a></li> --}}
           <li class="{{ 'dashboard/withdraw' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
-      </li>
-      @if (Auth::user()->usertype == "ADMIN")
-      <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}"><a href="/admin"> <i class="fa fa-money"></i>Admin Page</a> </li>
-  @endif
+
+            @if (Auth::user()->usertype == "ADMIN")
+                 <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}"><a href="/admin"> <i class="fa fa-money"></i>Admin Page</a> </li>
+             @endif
         </ul>
                       </nav>
     <div class="page-content">
 
 
 
-                  <div class="page-header">
+
+                    <div class="page-header">
     <div class="container-fluid">
-      <h2 class="h5 no-margin-bottom">Sell Bitcoin</h2>
+      <h2 class="h5 no-margin-bottom">Admin Dashboard</h2>
+      @if (session('success'))
+      <div class="alert alert-success" role="alert">
+          {{ session('success') }}
+      </div>
+      @endif
     </div>
   </div>
-  <div>
-
-
-    </div>  <section class="no-padding-top no-padding-bottom">
+  <section class="no-padding-bottom">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-        <div class="alert alert-primary" role="alert">
-            <h2>Steps To Follow To Sell Your Bitcoin To Us</h2><hr>
-            <ol>
-                <li>Send your Bitcoin to this Wallet Address <mark>35yNEssnupUWZjZpCtmraFjJkxM5Q8RQmW</mark></li>
-                <li>Fill the form below and attach a screenshot of what you sent to our Wallet</li>
-                <li>Once confirmed by us we will credit your account</li>
-            </ol>
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+
+              <h5 class="card-title">Registered Users</h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="text-primary">
+                    <tr>
+                        <th>
+                            ID
+                          </th>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Email
+                      </th>
+                      <th>
+                        Phone Number
+                      </th>
+                      <th>
+                        UserName
+                      </th>
+
+                      <th>
+                        Country
+                      </th>
+                      <th>
+                        UserType
+                      </th>
+                    </tr>
+                  </thead>
+                  @foreach ($users as $user)
+                  <tbody>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->phone }}</td>
+                    <td>{{ $user->username }}</td>
+                    <td>{{ $user->country }}</td>
+                    <td>{{ $user->usertype }}</td>
+                    <td><a href="/user-edit/{{ $user->id }}" class="btn btn-success">EDIT</a></td>
+                    <td><form action="/deleteusers/{{ $user->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                        </form>
+                    </td>
+                                        {{-- No Users Registered yet records yet!
+                                      --}}
+
+
+                                    </tbody>
+                                    @endforeach
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-    <form action="https://www.icomarkettrading.com/sell-bitcoin" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Amount</label>
-        <input type="text" name="amount" class="form-control" required autocomplete="amount">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Bank Name</label>
-        <input type="text" name="bank_name" class="form-control" required autocomplete="bank_name">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Account Number</label>
-        <input type="text" name="account_number" class="form-control" required autocomplete="account_number">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Sort Code</label>
-        <input type="text" name="sort_code" class="form-control" required autocomplete="sort_code">
-    </div>
-    <div class="form-group">
-    <input type="hidden" name="user_id" value="72" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Image Attachment</label>
-        <input type="file" name="image" class="form-control">
-    </div>
-    <div>
-        <button type="submit" class="btn btn-primary"> SELL </button>
-    </div>
-    </form>
-</div>
-</div>
-</section>
-<footer class="footer">
+
+      </div>
+
+
+          </div>
+  </section>
+
+  <footer class="footer">
     <div class="footer__block block no-margin-bottom">
       <div class="container-fluid text-center">
         <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
+
+
     </div>
     </div>
     <style>

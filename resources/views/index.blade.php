@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Realcapitalassets/title>
+        <title>{{ config('app.name', 'RealCapitalAssets') }}</title>
         <!-- mobile responsive meta -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -182,7 +182,7 @@
 						<i class="bitmex-icon-data"></i>
 					</div><!-- /.icon-box -->
 					<a href="#"><h3>Relax</h3></a>
-					Now that your registration has been accepted and you’ve made your first investment, you’re all done. Simply click ‘trade’ to start reaping the daily % for trading with us, and ofcourse you can cancel your trade any time and withdraw your wallet balance.</p>
+					Now that your registration has been accepted and you’ve made your first investment, you’re all done. Simply click ‘trade’ to start reaping the monthly % for trading with us, and ofcourse you can cancel your trade any time and withdraw your wallet balance.</p>
 				</div><!-- /.single-feature-style-one -->
 			</div><!-- /.col-md-4 -->
 		</div><!-- /.row -->
@@ -494,7 +494,7 @@
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
-                    Realcapitalassets is a group of profesional forex traders that helps you trade you Cryptocurrency at the stock market and expect profits from %15 bper day, we also buy and sell cryptocurrency to whoever needs it.
+                    Realcapitalassets is a group of profesional forex traders that helps you trade you Cryptocurrency at the stock market and expect profits from 10% monthly, we also buy and sell cryptocurrency to whoever needs it.
                   </div>
                 </div>
               </div>
@@ -508,7 +508,7 @@
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
-                    You shoud expect to earn upto %15 percent if you are on our Gold plan, you can earn more than that if you invest more.
+                    You shoud expect to earn upto 10% percent if you are on our Gold plan, you can earn more than that if you invest more.
                   </div>
                 </div>
               </div>
@@ -555,17 +555,17 @@
 		<div class="row mt-5">
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 				<div class="single-footer-top">
-					<p><i class="bitmex-icon-envelope"></i><span>Email: </span>inquiry@bitcoin.com</p>
+					<p><i class="bitmex-icon-envelope"></i><span>Email: </span>realcapitalassets@gmail.com</p>
 				</div><!-- /.single-footer-top -->
 			</div><!-- /.col-md-4 -->
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 				<div class="single-footer-top">
-					<p><i class="bitmex-icon-phone-call"></i><span>Call: </span>2800 256 508</p>
+					<p><i class="bitmex-icon-phone-call"></i><span>Call: </span>+1 978 464 1094</p>
 				</div><!-- /.single-footer-top -->
 			</div><!-- /.col-md-4 -->
 			<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
 				<div class="single-footer-top">
-					<p><i class="bitmex-icon-placeholder"></i><span>Address: </span>Suite 20 Bitcoin Street West USA</p>
+					<p><i class="bitmex-icon-placeholder"></i><span>Address: </span>4524 Sardis Station,<br> Conehatta, United States</p>
 				</div><!-- /.single-footer-top -->
 			</div><!-- /.col-md-4 -->
 		</div><!-- /.row -->
@@ -582,10 +582,10 @@
 					</div><!-- /.title -->
 					<ul class="links-list">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Our Team</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a href="#">Latest News</a></li>
+						{{-- <li><a href="#">Jobs</a></li> --}}
+						{{-- <li><a href="#">Our Team</a></li> --}}
+						<li><a href="#contact">Contact Us</a></li>
+						{{-- <li><a href="#">Latest News</a></li> --}}
 						<li><a href="#">Free Consultancy</a></li>
 					</ul><!-- /.links-list -->
 				</div><!-- /.single-footer-widget -->
@@ -600,7 +600,7 @@
 						<li><a href="#">Wallets</a></li>
 						<li><a href="#">Buy & Sell Bitcoins</a></li>
 						<li><a href="#">Exchange Market</a></li>
-						<li><a href="#">Daily Stats</a></li>
+						{{-- <li><a href="#">monthly Stats</a></li> --}}
 					</ul><!-- /.links-list -->
 				</div><!-- /.single-footer-widget -->
 			</div><!-- /.col-md-3 -->
@@ -610,10 +610,10 @@
 						<h3>Legal</h3>
 					</div><!-- /.title -->
 					<ul class="links-list">
-						<li><a href="#">Guide</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Advertise</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+						{{-- <li><a href="#">Guide</a></li> --}}
+						<li><a href="#faq">FAQ</a></li>
+						{{-- <li><a href="#">Advertise</a></li> --}}
+						{{-- <li><a href="#">Privacy Policy</a></li> --}}
 						<li><a href="#">Terms of Use</a></li>
 					</ul><!-- /.links-list -->
 				</div><!-- /.single-footer-widget -->
@@ -623,7 +623,8 @@
 					<div class="title">
 						<h3>Subscribe</h3>
 					</div><!-- /.title -->
-					<form action="inc/mailchimp/subscribe.php" class="subscribe-form">
+                    <form action="{{ asset('inc/mailchimp/subscribe.php') }}" method="post" class="subscribe-form">
+                        @csrf
 						<input type="text" placeholder="Email Address" />
 						<button type="submit" class="fa fa-check"></button>
 					</form><!-- /.subscribe-form -->
@@ -636,7 +637,9 @@
 <div class="footer-bottom">
 	<div class="thm-container clearfix">
 		<div class="pull-left copy-text">
-			<p>&copy; 2021 Realcapitalassets All copy rights are reserved. Powered by Witt<span style="color: plum;">Stack</span></p>
+			<p>&copy; 2021 Realcapitalassets. All copy rights are reserved.
+                 {{-- Powered by Witt<span style="color: plum;">Stack</span>--}}
+                </p>
 		</div><!-- /.pull-left copy-text -->
 		<div class="social pull-right">
         	<a href="#" class="fa fa-twitter"></a><!--
