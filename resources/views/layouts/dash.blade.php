@@ -54,8 +54,8 @@
 
             <!-- Log out               -->
 
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a style="color: fff;" class="dropdown-item" href="{{ route('logout') }}"
+            <div  class="list-inline-item logout" aria-labelledby="navbarDropdown">
+                <a style="color: fff !important;" class="dropdown-item" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
@@ -68,7 +68,11 @@
         </div>
       </nav>
     </header>
-
+<style>
+    body {
+        background: #fff;
+    }
+</style>
     <main>
         @yield('content')
     </main>
