@@ -28,4 +28,8 @@ class DashboardController extends Controller
     public function buybitcoin() {
         return view('dashboard.buy-bitcoin');
     }
+
+    public function plan() {
+        return view('dashboard.plan');
+    }
 }

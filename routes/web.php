@@ -27,9 +27,10 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('dashboard/withdraw', 'DashboardController@withdraw');
 Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
 Route::get('dashboard/buy-bitcoin', 'DashboardController@buybitcoin');
-Route::get('/welcome', function() {
-    return view('welcome');
-});
+Route::get('dashboard/plan', 'DashboardController@plan');
+// Route::get('/welcome', function() {
+//     return view('welcome');
+// });
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', 'Admin\DashboardController@registerUser');
