@@ -54,9 +54,18 @@
           <div class="right-menu list-inline no-margin-bottom">
 
             <!-- Log out               -->
-
-            <div  class="list-inline-item logout" aria-labelledby="navbarDropdown">
-                <a style="color: fff !important;" class="dropdown-item" href="{{ route('logout') }}"
+<style>
+    #logout:hover, #logout:focus {
+    background: rgb(23, 97, 23) !important;
+    color: #fff !important;
+    cursor: pointer;
+    text-decoration: none !important;
+    list-style: none !important;
+    /* padding: 10px */
+}
+    </style>
+            <div id="logout" class="list-inline-item logout" style="list-style: none !important;  text-decoration: none !important; background:  rgb(86, 230, 86); cursor: pointer; padding: 15px 20px; color: #fff !important;" aria-labelledby="navbarDropdown">
+                <a style="list-style: none !important;  text-decoration: none !important;" class="dropdown-itemm" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}

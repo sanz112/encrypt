@@ -9,9 +9,6 @@
 
           <div class="title">
             <h1 class="h5">{{ Auth::user()->username }}</h1>
-            {{-- <p>
-                                              Pending
-                                            </p> --}}
           </div>
         </div>
                <ul class="list-unstyled">
@@ -24,8 +21,23 @@
               <li class="{{ 'dashboard/withdraw' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
               </li>
               @if (Auth::user()->usertype == "ADMIN")
-                 <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}"><a href="/admin"> <i class="fa fa-money"></i>Admin Page</a> </li>
-             @endif
+              <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}">
+              <div class="dropdown">
+                  {{-- <a class="btn btn-primary dropdown-toggle" href="#!" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                  </a> --}}
+                  <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/admin"> <i class="fa fa-money"></i>Admin Page</a>
+                  <div class="dropdown-menu dropdown-primary" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="/admin"><i class="fa fa-money"></i>Home</a>
+                    <a class="dropdown-item" href="/admin/plan"><i class="fa fa-money"></i>Plan</a>
+                    <a class="dropdown-item" href="/admin/withdraw"><i class="fa fa-money"></i>Withdraw</a>
+                    <a class="dropdown-item" href="/admin/seller"><i class="fa fa-money"></i>Sellers</a>
+                    <a class="dropdown-item" href="/admin/buyer"><i class="fa fa-money"></i>Buyers</a>
+                  </div>
+                </div>
+              </li>
+          @endif
 
         </ul>
                       </nav>
@@ -53,11 +65,17 @@
                         @csrf
                         @method('PATCH')
                         <div class="form-group row">
-                          <label for="name" class="col-sm-2 col-form-label">Name</label>
+                          <label for="name" class="col-sm-2 col-form-label">First Name</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" value="{{ $users->name }}" name="name"  id="name" placeholder="name">
+                            <input type="text" class="form-control" value="{{ $users->fname }}" name="fname"  id="fname" placeholder="First Name">
                           </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Last Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" value="{{ $users->lname }}" name="lname"  id="lname" placeholder="Last Name">
+                            </div>
+                          </div>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

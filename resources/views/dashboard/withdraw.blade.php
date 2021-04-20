@@ -24,7 +24,22 @@
           <li class="{{ 'dashboard/withdraw' ==  request()->path() ? 'active' : '' }}"><a href="/dashboard/withdraw"> <i class="fa fa-money"></i>Withdraw</a>
       </li>
       @if (Auth::user()->usertype == "ADMIN")
-      <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}"><a href="/admin"> <i class="fa fa-money"></i>Admin Page</a> </li>
+      <li class="{{ 'admin' ==  request()->path() ? 'active' : '' }}">
+      <div class="dropdown">
+          {{-- <a class="btn btn-primary dropdown-toggle" href="#!" role="button" id="dropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a> --}}
+          <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/admin"> <i class="fa fa-money"></i>Admin Page</a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/admin"><i class="fa fa-money"></i>Home</a>
+            <a class="dropdown-item" href="/admin/plan"><i class="fa fa-money"></i>Plan</a>
+            <a class="dropdown-item" href="/admin/withdraw"><i class="fa fa-money"></i>Withdraw</a>
+            <a class="dropdown-item" href="/admin/seller"><i class="fa fa-money"></i>Sellers</a>
+            <a class="dropdown-item" href="/admin/buyer"><i class="fa fa-money"></i>Buyers</a>
+          </div>
+        </div>
+      </li>
   @endif
         </ul>
                       </nav>

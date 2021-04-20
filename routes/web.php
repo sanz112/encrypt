@@ -35,6 +35,10 @@ Route::post('/withdraw', 'DashboardController@withdrawCoin');
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', 'Admin\DashboardController@registerUser');
     Route::get('/user-edit/{id}', 'Admin\DashboardController@editUser');
+    Route::get('/admin/plan', 'Admin\DashboardController@plan');
+    Route::get('/admin/seller', 'Admin\DashboardController@seller');
+    Route::get('/admin/buyer', 'Admin\DashboardController@buyer');
+    Route::get('/admin/withdraw', 'Admin\DashboardController@withdraw');
     Route::get('/edit_bitcoin_address/{id}', 'Admin\DashboardController@editbitcoinAddress');
     Route::patch('/update_bitcoin_address/{id}', 'Admin\DashboardController@updatebitcoinAddress');
     Route::patch('/updateusers/{id}', 'Admin\DashboardController@updateUser');

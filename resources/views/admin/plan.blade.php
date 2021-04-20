@@ -66,7 +66,7 @@
           <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
 
-              <h5 class="card-title">Registered Users</h5>
+              <h5 class="card-title">Users Investment Plans</h5>
 
               <a href="/edit_bitcoin_address/{{ Auth::user()->id }}" class="btn btn-success">Edit your bitcoin address </a>
             </div>
@@ -79,10 +79,10 @@
                             ID
                           </th>
                       <th>
-                       First Name
+                      Plan
                       </th>
                       <th>
-                        Last Name
+                        User ID
                       </th>
                       <th>
                         Email
@@ -93,30 +93,25 @@
                       <th>
                         UserName
                       </th>
-
-                      <th>
-                        Country
-                      </th>
                       <th>
                         UserType
                       </th>
                     </tr>
                   </thead>
-                  @foreach ($users as $user)
+                  {{-- @foreach ($users as $user) --}}
                   <tbody>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->fname }}</td>
-                    <td>{{ $user->lname }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->phone }}</td>
-                    <td>{{ $user->username }}</td>
-                    <td>{{ $user->country }}</td>
-                    <td>{{ $user->usertype }}</td>
-                    <td><a href="/user-edit/{{ $user->id }}" class="btn btn-success">EDIT</a></td>
-                    <td><form action="/deleteusers/{{ $user->id }}" method="POST">
+                    <td>1</td>
+                    <td>dsfdsgdfg</td>
+                    <td>dsfdsgdf</td>
+                    <td>dsfdsgdf</td>
+                    <td>dsfdsgdf</td>
+                    <td>dsfdsgdf</td>
+                    <td>dsfdsgdf</td>
+                    <td><a href="/user-edit" class="btn btn-success">Approve</a></td>
+                    <td><form action="/deleteusers" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">DELETE</button>
+                        <button type="submit" class="btn btn-danger">Disapprove</button>
                         </form>
                     </td>
                                         {{-- No Users Registered yet records yet!
@@ -124,7 +119,7 @@
 
 
                                     </tbody>
-                                    @endforeach
+                                    {{-- @endforeach --}}
                 </table>
               </div>
             </div>

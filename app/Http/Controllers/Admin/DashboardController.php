@@ -8,6 +8,24 @@ use App\User;
 
 class DashboardController extends Controller
 {
+
+    public function plan() {
+        return view('admin.plan');
+    }
+
+    public function buyer() {
+        return view('admin.buyer');
+    }
+
+    public function seller() {
+        return view('admin.seller');
+    }
+
+    public function withdraw() {
+        return view('admin.withdraw');
+    }
+
+
     public function registerUser(User $users) {
         $users = User::all();
         return view('admin.dashboard')->with('users', $users);
