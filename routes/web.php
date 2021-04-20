@@ -28,6 +28,11 @@ Route::get('dashboard/withdraw', 'DashboardController@withdraw');
 Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
 Route::get('dashboard/buy-bitcoin', 'DashboardController@buybitcoin');
 Route::get('dashboard/plan', 'DashboardController@plan');
+Route::post('dashboard/plan', 'DashboardController@planPost');
+Route::post('/buy-bitcoin', 'DashboardController@buyBit');
+Route::post('/sell-crypto', 'DashboardController@sellCrypt');
+Route::post('/plan', 'DashboardController@planCoin');
+Route::post('/withdraw', 'DashboardController@withdrawCoin');
 // Route::get('/welcome', function() {
 //     return view('welcome');
 // });

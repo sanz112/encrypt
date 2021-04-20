@@ -46,6 +46,11 @@
     </div><section class="no-padding-top no-padding-bottom">
   <div class="container-fluid">
     <div class="row">
+        @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+        @endif
       <div class="col-md-12">
         <div class="alert alert-primary" role="alert">
             <h2>Steps To Follow To Buy Bitcoin from Us</h2><hr>
@@ -55,24 +60,24 @@
                 <li>Once confirmed by us we will credit your Bitcoin Wallet</li>
             </ol>
           </div>
-    <form action="https://www.icomarkettrading.com/buy-bitcoin" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
+    <form action="/buy-bitcoin" method="POST" enctype="multipart/form-data">
+    @csrf
+    {{-- @method('POST') --}}
     <div class="form-group">
-        <label for="exampleFormControlInput1">Amount</label>
-        <input type="text" name="amount" class="form-control" required autocomplete="amount">
+        <label for="amount">Amount</label>
+        <input type="text" name="amount" class="form-control" id="amount" required autocomplete="amount">
     </div>
     <div class="form-group">
-        <label for="exampleFormControlInput1">Wallet Name</label>
-        <input type="text" name="wallet_name" class="form-control" required autocomplete="bank_name">
+        <label for="wallet_name">Wallet Name</label>
+        <input type="text" name="wallet_name" class="form-control" required autocomplete="wallet_name">
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Wallet Address</label>
-        <input type="text" name="hash_key" class="form-control" required autocomplete="account_number">
+        <input type="text" name="hash_key" class="form-control" required autocomplete="hash_key">
     </div>
-
-    <div class="form-group">
-    <input type="hidden" name="user_id" value="72" class="form-control">
-    </div>
+    {{-- <div class="form-group">
+    <input type="hidden" name="user_id" id="user_id" value="72" class="form-control">
+    </div> --}}
 
     <div>
         <button type="submit" class="btn btn-primary"> BUY </button>

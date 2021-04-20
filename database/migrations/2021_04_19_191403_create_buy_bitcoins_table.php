@@ -15,6 +15,10 @@ class CreateBuyBitcoinsTable extends Migration
     {
         Schema::create('buy_bitcoins', function (Blueprint $table) {
             $table->id();
+            $table->string('amount');
+            $table->string('wallet_name');
+            $table->string('hash_key');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

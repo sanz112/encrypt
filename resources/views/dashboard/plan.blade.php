@@ -9,9 +9,6 @@
 
           <div class="title">
             <h1 class="h5">{{ Auth::user()->username }}</h1>
-            {{-- <p>
-                                              Pending
-                                            </p> --}}
           </div>
         </div>
         <ul class="list-unstyled">
@@ -44,7 +41,11 @@
   </div><section class="no-padding-top no-padding-bottom">
 <div class="container-fluid">
   <div class="row">
-
+    @if (session('status'))
+    <div class="alert alert-danger" role="alert">
+        {{ session('status') }}
+    </div>
+    @endif
   <div class="col-md-12">
       <div class="alert alert-primary" role="alert">
           <h2>Steps To Follow To Start Trading</h2><hr>
