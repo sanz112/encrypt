@@ -25,71 +25,140 @@
 <body>
 <main>
 <div class="container">
-    <div style="height: 100%;margin: 15% 0 0 0;" class="row d-flex justify-content-center align-items-center">
+    <div style="height: 100%;" class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8">
-            <h4 class="text-center">RealCapitalAssets</h4>
+
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                {{-- <div class="card-header">{{ __('Login') }}</div> --}}
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                    <h4 class="text-center">RealCapitalAssets</h4>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <style>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus>
+                        .form-control {
+                            height: 40px;
+                            box-shadow: none;
+                            color: #969fa4;
+                        }
+                        .form-control:focus {
+                            border-color: #5cb85c;
+                        }
+                        .form-control, .btn {
+                            border-radius: 3px;
+                        }
+                        .signup-form {
+                            width: 450px;
+                            margin: 0 auto;
+                            padding: 30px 0;
+                              font-size: 15px;
+                        }
+                        .signup-form h2 {
+                            color: #636363;
+                            margin: 0 0 15px;
+                            position: relative;
+                            text-align: center;
+                        }
+                        .signup-form h2:before, .signup-form h2:after {
+                            content: "";
+                            height: 2px;
+                            width: 30%;
+                            background: #d4d4d4;
+                            position: absolute;
+                            top: 50%;
+                            z-index: 2;
+                        }
+                        .signup-form h2:before {
+                            left: 0;
+                        }
+                        .signup-form h2:after {
+                            right: 0;
+                        }
+                        .signup-form .hint-text {
+                            color: #999;
+                            margin-bottom: 30px;
+                            text-align: center;
+                        }
+                        .signup-form form {
+                            color: #999;
+                            border-radius: 3px;
+                            margin-bottom: 15px;
+                            background: #f2f3f7;
+                            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                            padding: 30px;
+                        }
+                        .signup-form .form-group {
+                            margin-bottom: 20px;
+                        }
+                        .signup-form input[type="checkbox"] {
+                            margin-top: 3px;
+                        }
+                        .signup-form .btn {
+                            font-size: 16px;
+                            font-weight: bold;
+                            min-width: 140px;
+                            outline: none !important;
+                        }
+                        .signup-form .row div:first-child {
+                            padding-right: 10px;
+                        }
+                        .signup-form .row div:last-child {
+                            padding-left: 10px;
+                        }
+                        .signup-form a {
+                            color: #fff;
+                            text-decoration: underline;
+                        }
+                        .signup-form a:hover {
+                            text-decoration: none;
+                        }
+                        .signup-form form a {
+                            color: #5cb85c;
+                            text-decoration: none;
+                        }
+                        .signup-form form a:hover {
+                            text-decoration: underline;
+                        }
+                        </style>
+                        <div class="signup-form">
+                            <form method="POST" action="{{ route('login') }}">
 
-                                @error('email')
+                                <h2>LogIn</h2>
+                                <p class="hint-text">Log into your account</p>
+                                @csrf
+                                <div class="form-group">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Email">
+                             @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
 
-                                @if (Route::has('password.request'))
+                                <div class="form-group">
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                        {{ __('Login') }}
+                                    </button>
+                                    @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                                <br>
-                                <a class="btn btn-link" href="/register">
-                                    {{ __('Sign Up?') }}
-                                </a>
+
+                                </div>
+                            </form>
+                            <div class="text-center">Do not have an Account? <a style="color:#000;" class="btn btn-link ml-2" href="/register">{{ __('Sign Up?') }}</a></div>
+                        </div>
                             </div>
                         </div>
                     </form>

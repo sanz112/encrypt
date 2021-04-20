@@ -47,7 +47,7 @@
           <div class="navbar-header">
             <!-- Navbar Header--><a href="{{ url('/') }}" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary"> {{ config('app.name', 'RealCapitalAssets') }}</strong></div>
-              <div class="brand-text brand-sm"><strong class="text-primary">R</strong><strong>A</strong></div></a>
+              <div class="brand-text brand-sm"><strong class="text-primary">R</strong><strong class="text-secondary">C</strong><strong>A</strong></div></a>
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>

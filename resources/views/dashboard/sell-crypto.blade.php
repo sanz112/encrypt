@@ -131,43 +131,6 @@
     <script src="/js/plug/chart.js"></script>
     <script src="/js/plug/front.js"></script>
     <script>
-var $ = jQuery;
-
-   $(".btn-primary").click(function(event){
-       event.preventDefault();
-
-       let name = $("#name").val();
-       let user_id = $("#user_id").val();
-        let _token = $('meta[name="csrf-token"]').attr('content');
-
-       $.ajax({
-         url: "plan",
-         type:"POST",
-         data:{
-           name:name,
-           user_id:user_id,
-           _token:_token
-         },
-         success:function(response){
-           console.log(response);
-           if(response.success) {
-
-            swal({
-              title: "Success!",
-              text: `${response.success}`,
-              icon: "success",
-              button: "OK",
-            })
-            $("#myForm")[0].reset();
-           }else{
-            swal('Oops!', `${response.error}`, 'error');
-             $("#myForm")[0].reset();
-           }
-         },
-
-       });
-
-   });
 
 
       var formatter = new Intl.NumberFormat('en-US', {
