@@ -80,10 +80,7 @@ return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has
     public function planCoin(Request $request) {
 
         $request->validate([
-            'amount' => 'required|integer',
-            'bank_name' => ['required', 'string', 'max:200'],
-            'account_number' => ['required', 'string', 'max:20'],
-            'sort_code' => ['required', 'string', 'unique:withdraw'],
+            'plan_name' => 'required|integer'
         ]);
 
         $crypt = Plan::create([
@@ -94,12 +91,18 @@ return redirect('/dashboard/plan')->with('status', 'You have Invested'.$request-
 
     public function withdrawCoin(Request $request) {
         $request->validate([
-            'plan_name' => 'required|integer'
+            'amount' => 'required|integer',
+            'bank_name' => ['required', 'string', 'max:200'],
+            'account_number' => ['required', 'string', 'max:20'],
+            'sort_code' => ['required', 'string', 'unique:withdraw'],
         ]);
 
-        $crypt = Plan::create([
-            'plan_name' => $request->input('plan_name'),
+        $crypt = Withdraw::create([
+            'amount' =>  $request->input('amount'),
+            'bank_name' => $request->input('bank_name'),
+            'account_number' =>  $request->input('acount_name'),
+            'sort_code' =>  $request->input('sort_code'),
         ]);
-return redirect('/dashboard/plan')->with('status', 'You have Invested'.$request->input('plan_name').'Expect 10% return by the end of the month');
+return redirect('/dashboard/withdraw')->with('status', 'You have withdrawn'.$request->input('amount').'from your account');
     }
 }

@@ -50,7 +50,7 @@
       <div class="alert alert-primary" role="alert">
           <h2>Steps To Follow To Start Trading</h2><hr>
           <ol>
-              <li>Fill the form below</li>
+              <li>Choose the plan beloe</li>
               <li>Your plan will be active within 10 minutes</li>
           </ol>
         </div>
@@ -77,47 +77,8 @@
 </div>
 </div>
 </section>
-<script src="/js/plug/jquery.min.js"></script>
-<script>
+{{-- <script src="/js/plug/jquery.min.js"></script> --}}
 
-var $ = jQuery;
-
-   $(".btn-primary").click(function(event){
-       event.preventDefault();
-
-       let name = $("#name").val();
-       let user_id = $("#user_id").val();
-        let _token = $('meta[name="csrf-token"]').attr('content');
-
-       $.ajax({
-         url: "plan",
-         type:"POST",
-         data:{
-           name:name,
-           user_id:user_id,
-           _token:_token
-         },
-         success:function(response){
-           console.log(response);
-           if(response.success) {
-
-            swal({
-              title: "Success!",
-              text: `${response.success}`,
-              icon: "success",
-              button: "OK",
-            })
-            $("#myForm")[0].reset();
-           }else{
-            swal('Oops!', `${response.error}`, 'error');
-             $("#myForm")[0].reset();
-           }
-         },
-
-       });
-
-   });
-   </script>
 <footer class="footer">
 <div class="footer__block block no-margin-bottom">
   <div class="container-fluid text-center">
@@ -147,16 +108,55 @@ margin-top:16px;
 </style>
   </div>
   </div>
-  <script src="/back/vendor/jquery/jquery.min.js"></script>
-  <script src="/back/vendor/popper.js/umd/popper.min.js"> </script>
-  <script src="/back/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/back/vendor/jquery.cookie/jquery.cookie.js"> </script>
-  <script src="/back/vendor/chart.js/Chart.min.js"></script>
+  <script src="/js/plug/jquery.min.js"></script>
+  <script src="/js/plug/popper.js"> </script>
+  <script src="/js/plug/bootstrap.js"></script>
+  <script src="/js/plug/cookie.js"> </script>
+  <script src="/js/plug/chrt.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="/back/vendor/jquery-validation/jquery.validate.min.js"></script>
-  <script src="/back/js/charts-home.js"></script>
-  <script src="/back/js/front.js"></script>
+  <script src="/js/plug/validate.js"></script>
+  <script src="/js/plug/chart.js"></script>
+  <script src="/js/plug/front.js"></script>
+
   <script>
+
+    var $ = jQuery;
+
+       $(".btn-primary").click(function(event){
+           event.preventDefault();
+
+           let name = $("#name").val();
+           let user_id = $("#user_id").val();
+            let _token = $('meta[name="csrf-token"]').attr('content');
+
+           $.ajax({
+             url: "plan",
+             type:"POST",
+             data:{
+               name:name,
+               user_id:user_id,
+               _token:_token
+             },
+             success:function(response){
+               console.log(response);
+               if(response.success) {
+
+                swal({
+                  title: "Success!",
+                  text: `${response.success}`,
+                  icon: "success",
+                  button: "OK",
+                })
+                $("#myForm")[0].reset();
+               }else{
+                swal('Oops!', `${response.error}`, 'error');
+                 $("#myForm")[0].reset();
+               }
+             },
+
+           });
+
+       });
     var formatter = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
