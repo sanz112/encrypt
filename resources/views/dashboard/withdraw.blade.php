@@ -42,6 +42,11 @@
     </div><section class="no-padding-top no-padding-bottom">
   <div class="container-fluid">
     <div class="row">
+        @if (session('status'))
+        <div class="mt-4 alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+        </div>
+        @endif
       <div class="col-md-12">
         <div class="alert alert-primary" role="alert">
             <h2>Steps To Follow To Withdraw Your Cash</h2><hr>

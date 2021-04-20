@@ -47,7 +47,7 @@
   <div class="container-fluid">
     <div class="row">
         @if (session('status'))
-        <div class="alert alert-success" role="alert">
+        <div class="mt-4 alert alert-success alert-dismissible fade show" role="alert">
             {{ session('status') }}
         </div>
         @endif

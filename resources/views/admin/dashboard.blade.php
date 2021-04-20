@@ -38,7 +38,7 @@
     <div class="container-fluid">
       <h2 class="h5 no-margin-bottom">Admin Dashboard</h2>
       @if (session('success'))
-      <div class="alert alert-success" role="alert">
+      <div class="mt-4 alert alert-success alert-dismissible" role="alert">
           {{ session('success') }}
       </div>
       @endif
@@ -49,9 +49,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
 
               <h5 class="card-title">Registered Users</h5>
+
+              <a href="/edit_bitcoin_address/{{ Auth::user()->id }}" class="btn btn-success">Edit your bitcoin address </a>
             </div>
             <div class="card-body">
               <div class="table-responsive">

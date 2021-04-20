@@ -21,8 +21,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('dashboard/withdraw', 'DashboardController@withdraw');
 Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
@@ -33,13 +31,12 @@ Route::post('/buy-bitcoin', 'DashboardController@buyBit');
 Route::post('/sell-crypto', 'DashboardController@sellCrypt');
 Route::post('/plan', 'DashboardController@planCoin');
 Route::post('/withdraw', 'DashboardController@withdrawCoin');
-// Route::get('/welcome', function() {
-//     return view('welcome');
-// });
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', 'Admin\DashboardController@registerUser');
     Route::get('/user-edit/{id}', 'Admin\DashboardController@editUser');
+    Route::get('/edit_bitcoin_address/{id}', 'Admin\DashboardController@editbitcoinAddress');
+    Route::patch('/update_bitcoin_address/{id}', 'Admin\DashboardController@updatebitcoinAddress');
     Route::patch('/updateusers/{id}', 'Admin\DashboardController@updateUser');
     Route::delete('/deleteusers/{id}', 'Admin\DashboardController@deleteUser');
 });

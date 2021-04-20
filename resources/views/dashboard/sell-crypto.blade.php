@@ -43,6 +43,11 @@
     </div>  <section class="no-padding-top no-padding-bottom">
     <div class="container-fluid">
       <div class="row">
+        @if (session('status'))
+        <div class="mt-4 alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+        </div>
+        @endif
         <div class="col-md-12">
         <div class="alert alert-primary" role="alert">
             <h2>Steps To Follow To Sell Your Bitcoin To Us</h2><hr>
@@ -52,8 +57,8 @@
                 <li>Once confirmed by us we will credit your account</li>
             </ol>
         </div>
-    <form action="https://www.icomarkettrading.com/sell-bitcoin" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_token" value="SEnWseU2wD2FeCIYUvrMUDDhNjB0yAeQOuUE7zqD">
+    <form action="/sell-crypto" method="POST" enctype="multipart/form-data">
+        @csrf
     <div class="form-group">
         <label for="exampleFormControlInput1">Amount</label>
         <input type="text" name="amount" class="form-control" required autocomplete="amount">
@@ -126,6 +131,45 @@
     <script src="/js/plug/chart.js"></script>
     <script src="/js/plug/front.js"></script>
     <script>
+var $ = jQuery;
+
+   $(".btn-primary").click(function(event){
+       event.preventDefault();
+
+       let name = $("#name").val();
+       let user_id = $("#user_id").val();
+        let _token = $('meta[name="csrf-token"]').attr('content');
+
+       $.ajax({
+         url: "plan",
+         type:"POST",
+         data:{
+           name:name,
+           user_id:user_id,
+           _token:_token
+         },
+         success:function(response){
+           console.log(response);
+           if(response.success) {
+
+            swal({
+              title: "Success!",
+              text: `${response.success}`,
+              icon: "success",
+              button: "OK",
+            })
+            $("#myForm")[0].reset();
+           }else{
+            swal('Oops!', `${response.error}`, 'error');
+             $("#myForm")[0].reset();
+           }
+         },
+
+       });
+
+   });
+
+
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',

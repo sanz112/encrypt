@@ -19,21 +19,24 @@ class DashboardController extends Controller
     }
 
     public function updateUser(Request $request, $id) {
-        $users = User::find($id);
+
+        $users = User::findorfail($id);
+
+        // $request->validate([
+        //     'name' => ['string', 'max:100'],
+        //     'email' => ['string', 'email', 'max:50', 'unique:users'],
+        //     'username' => ['string', 'max:9', 'unique:users'],
+        //     'country' => ['string', 'max:20', 'min:3'],
+        //     'phone' => ['string', 'max:11', 'unique:users'],
+        // ]);
+
 
         $users->name = $request->input('name');
         $users->username = $request->input('username');
         $users->email = $request->input('email');
         $users->phone = $request->input('phone');
         $users->country = $request->input('country');
-
-    //     $data = request()->validate((
-    //         'name' => '',
-    //         'username' => '',
-    //         'phone' => '',
-    //         // 'image' => ''
-    //  ]);
-
+        $users->usertype = $request->input('usertype');
         $users->update();
 
         return redirect('/admin')->with('success', 'Database has been updated');
@@ -44,5 +47,16 @@ class DashboardController extends Controller
         $users->delete();
 
         return redirect('/admin')->with('success', 'Users has been deleted!');
+    }
+    public function editbitcoinAddress($id) {
+        $users = User::findorfail($id);
+       return view('admin.edit_bitcoin_address')->with('users', $users);
+    }
+
+    public function updatebitcoinAddress(Request $request, $id) {
+        $users = User::findorfail($id);
+        $users->bitcoinAddress = $request->input('bitcoinAddress');
+        $users->update();
+        return redirect('/admin')->with('success', 'Your Bitcoin Address has been updated');
     }
 }

@@ -37,7 +37,7 @@
     <div class="container-fluid">
       <h2 class="h5 no-margin-bottom">Dashboard</h2>
       @if (session('status'))
-      <div class="alert alert-danger" role="alert">
+      <div class="mt-4 alert alert-danger alert-dismissible fade show" role="alert">
           {{ session('status') }}
       </div>
       @endif
