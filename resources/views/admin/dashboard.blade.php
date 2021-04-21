@@ -137,7 +137,7 @@
           </div>
   </section>
 
-  <footer class="footer">
+  <footer class="mt-3 footer">
     <div class="footer__block block no-margin-bottom">
       <div class="container-fluid text-center">
         <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>

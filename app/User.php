@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\BuyBitcoin;
 
 class User extends Authenticatable
 {
@@ -28,6 +29,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $primaryKey = 'id';
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,4 +39,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function buyBitcoins(){
+        return $this->hasMany(BuyBitcoin::class);
+    }
 }

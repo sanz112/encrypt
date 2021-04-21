@@ -75,24 +75,39 @@
                 <li>Once confirmed by us we will credit your Bitcoin Wallet</li>
             </ol>
           </div>
-    <form action="/buy-bitcoin" method="POST" enctype="multipart/form-data">
+    <form class="mb-3" action="/buy-bitcoin" method="POST" enctype="multipart/form-data">
     @csrf
     {{-- @method('POST') --}}
     <div class="form-group">
         <label for="amount">Amount</label>
-        <input type="text" name="amount" class="form-control" id="amount" required autocomplete="amount">
+        <input type="text" name="amount" class="form-control @error('amount') is-invalid @enderror" id="amount" autocomplete="amount">
+        @error('amount')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
     <div class="form-group">
         <label for="wallet_name">Wallet Name</label>
-        <input type="text" name="wallet_name" class="form-control" required autocomplete="wallet_name">
+        <input type="text" name="wallet_name" class="form-control @error('wallet_name') is-invalid @enderror" autocomplete="wallet_name">
+        @error('wallet_name')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Wallet Address</label>
-        <input type="text" name="hash_key" class="form-control" required autocomplete="hash_key">
+        <input type="text" name="hash_key" class="form-control  @error('hash_key') is-invalid @enderror" autocomplete="hash_key">
+        @error('hash_key')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
-    {{-- <div class="form-group">
-    <input type="hidden" name="user_id" id="user_id" value="72" class="form-control">
-    </div> --}}
+    <div class="form-group">
+    <input type="hidden" name="user_id" id="user_id" value="{{ request()->user()->id }}" class="form-control">
+    </div>
 
     <div>
         <button type="submit" class="btn btn-primary"> BUY </button>
@@ -102,7 +117,7 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer class="mt-3 footer">
   <div class="footer__block block no-margin-bottom">
     <div class="container-fluid text-center">
       <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>

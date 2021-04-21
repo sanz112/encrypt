@@ -72,14 +72,14 @@
               <div class="alert alert-primary" role="alert">
                   <h2>Steps To Follow To Start Trading</h2><hr>
                   <ol>
-                      <li>Choose the plan beloe</li>
+                      <li>Choose the plan below</li>
                       <li>Your plan will be active within 10 minutes</li>
                   </ol>
                 </div>
-          <form id="myForm">
+          <form class="mb-3" id="myForm">
           <div class="form-group">
               <label for="exampleFormControlInput1">Choose a plan</label>
-              <select name="name" id="name"class="form-control" required>
+              <select name="plan_name" id="plan_name"class="form-control" required>
               <option style="background-color:black;" value="beginner">Beginner 250$</option>
               <option style="background-color:black;" value="bronze">Bronze 500$</option>
               <option style="background-color:black;" value="silver">Silver 1000$</option>
@@ -101,7 +101,7 @@
         </section>
 
 
-<footer class="footer">
+<footer class="mt-3 footer">
     <div class="footer__block block no-margin-bottom">
       <div class="container-fluid text-center">
         <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
