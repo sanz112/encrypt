@@ -193,13 +193,13 @@
 
                     <tr>
   <td>
-    {{ $model->amount }}
+    {{ $model->amount ?? '' }}
   </td>
   <td>
-    {{ $model->wallet_name }}
+    {{ $model->wallet_name ?? '' }}
   </td>
   <td>
-    {{ $model->hash_key }}
+    {{ $model->hash_key ?? '' }}
   </td>
   <td>
                           <span class="badge badge-danger">{{ $model->status}} </span>

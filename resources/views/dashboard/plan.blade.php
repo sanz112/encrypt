@@ -80,7 +80,6 @@
           <div class="form-group">
               <label for="exampleFormControlInput1">Choose a plan</label>
               <select name="plan_name" id="plan_name"class="form-control" required>
-              <option style="background-color:black;" value="beginner">Beginner 250$</option>
               <option style="background-color:black;" value="bronze">Bronze 500$</option>
               <option style="background-color:black;" value="silver">Silver 1000$</option>
               <option style="background-color:black;" value="gold">Gold 10,000$</option>

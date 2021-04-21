@@ -436,35 +436,35 @@
   <div class="panel pricing-table">
     <div class="pricing-plan">
       <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
-      <h2 class="pricing-header">Personal</h2>
+      <h2 class="pricing-header">Bronze</h2>
       <ul class="pricing-features">
-        <li class="pricing-features-item">Custom domains</li>
-        <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
+        <li class="pricing-features-item">10% ROI</li>
+        <li class="pricing-features-item">No Dedicated Trader</li>
       </ul>
-      <span class="pricing-price">Free</span>
-      <a href="#/" class="pricing-button">Sign up</a>
+      <span class="pricing-price">$500</span>
+      <a href="#/" class="pricing-button">Get Plan</a>
     </div>
     
     <div class="pricing-plan">
       <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
-      <h2 class="pricing-header">Small team</h2>
+      <h2 class="pricing-header">Silver</h2>
       <ul class="pricing-features">
-        <li class="pricing-features-item">Never sleeps</li>
-        <li class="pricing-features-item">Multiple workers for more powerful apps</li>
+        <li class="pricing-features-item">15% ROI</li>
+        <li class="pricing-features-item">No Dedicated Trader</li>
       </ul>
-      <span class="pricing-price">$150</span>
-      <a href="#/" class="pricing-button is-featured">Free trial</a>
+      <span class="pricing-price">$1000</span>
+      <a href="#/" class="pricing-button is-featured">Get Plan</a>
     </div>
     
     <div class="pricing-plan">
       <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
-      <h2 class="pricing-header">Enterprise</h2>
+      <h2 class="pricing-header">Gold</h2>
       <ul class="pricing-features">
-        <li class="pricing-features-item">Dedicated</li>
-        <li class="pricing-features-item">Simple horizontal scalability</li>
+        <li class="pricing-features-item">20% ROI</li>
+        <li class="pricing-features-item">Dedicated Trader</li>
       </ul>
-      <span class="pricing-price">$400</span>
-      <a href="#/" class="pricing-button">Free trial</a>
+      <span class="pricing-price">$10000</span>
+      <a href="#/" class="pricing-button">Get Plan</a>
     </div>
     
   </div>
