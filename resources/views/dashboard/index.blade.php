@@ -192,19 +192,19 @@
                   <tbody>
 
                     <tr>
-  <td>
-    {{ $model->amount ?? '' }}
-  </td>
-  <td>
-    {{ $model->wallet_name ?? '' }}
-  </td>
-  <td>
-    {{ $model->hash_key ?? '' }}
-  </td>
-  <td>
-                          <span class="badge badge-danger">{{ $model->status}} </span>
+                      <td>
+                        {{ $model->amount ?? '' }}
+                      </td>
+                      <td>
+                        {{ $model->wallet_name ?? '' }}
+                      </td>
+                      <td>
+                        {{ $model->hash_key ?? '' }}
+                      </td>
+                      <td>
+                        <span class="badge badge-danger">{{ $model->status}} </span>
                          </td>
-</tr>
+                      </tr>
                   </tbody>
 
                   @empty
@@ -242,17 +242,14 @@
                     </tr>
                   </thead>
                   <tbody>
-
-                                        No records yet!
-                                      </tbody>
+                  No records yet!
+                </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
           </div>
   </section>
 

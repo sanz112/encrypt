@@ -442,7 +442,7 @@
         <li class="pricing-features-item">No Dedicated Trader</li>
       </ul>
       <span class="pricing-price">$500</span>
-      <a href="#/" class="pricing-button">Get Plan</a>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
     
     <div class="pricing-plan">
@@ -453,7 +453,7 @@
         <li class="pricing-features-item">No Dedicated Trader</li>
       </ul>
       <span class="pricing-price">$1000</span>
-      <a href="#/" class="pricing-button is-featured">Get Plan</a>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
     
     <div class="pricing-plan">
@@ -464,7 +464,7 @@
         <li class="pricing-features-item">Dedicated Trader</li>
       </ul>
       <span class="pricing-price">$10000</span>
-      <a href="#/" class="pricing-button">Get Plan</a>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
     
   </div>
