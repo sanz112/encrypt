@@ -218,19 +218,19 @@
                   <tbody>
 
                     <tr>
-  <td>
-    {{ $model->amount }}
-  </td>
-  <td>
-    {{ $model->wallet_name }}
-  </td>
-  <td>
-    {{ $model->hash_key }}
-  </td>
-  <td>
-                          <span class="badge badge-danger">{{ $model->status}} </span>
+                      <td>
+                        {{ $model->amount ?? '' }}
+                      </td>
+                      <td>
+                        {{ $model->wallet_name ?? '' }}
+                      </td>
+                      <td>
+                        {{ $model->hash_key ?? '' }}
+                      </td>
+                      <td>
+                        <span class="badge badge-danger">{{ $model->status}} </span>
                          </td>
-</tr>
+                      </tr>
                   </tbody>
 
                   @empty
@@ -333,6 +333,7 @@
                     </tr>
                   </thead>
                   <tbody>
+<<<<<<< HEAD
 
                     @forelse ($users->plans as $model)
                     <tbody>
@@ -356,6 +357,10 @@
                      </td>
                   </tbody>
                     @endforelse
+=======
+                  No records yet!
+                </tbody>
+>>>>>>> 07e03910247d680a54dd485ad94e3e3ef4a38dfa
                 </table>
               </div>
             </div>
@@ -363,8 +368,6 @@
         </div>
 
       </div>
-
-
           </div>
   </section>
 

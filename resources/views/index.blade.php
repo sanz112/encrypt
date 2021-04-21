@@ -322,6 +322,48 @@
 </div><!-- /.thm-container -->
 </section><!-- /.how-it-works -->
 
+<section>
+  <div class="testimonials-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Testimonials </h2>
+            <p class="text-center">Our customers love us! Read what they have to say below.</p>
+        </div>
+        <div class="row people">
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box">
+                    <p class="description">
+                      RCA has helped me grow my finance in the past 2 years, while i focus on my business and family. 
+                    </p>
+                </div>
+                <div class="author"><img class="rounded-circle" src="/img/testimonial/1.jpg">
+                    <h5 class="name">Ben Johnson</h5>
+                    <p class="title">Customer.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box">
+                    <p class="description">I can never forget RCA for helping me grow my finance till i was able to start my own fashion school, RCA will be part of my success story for life..</p>
+                </div>
+                <div class="author"><img class="rounded-circle" src="/img/testimonial/3.jpg">
+                    <h5 class="name">Monroe Johnson</h5>
+                    <p class="title">Customer.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 item">
+                <div class="box">
+                    <p class="description">I have been paying of my mortgage from profits made from RCA, they have really been my guardian angel.</p>
+                </div>
+                <div class="author"><img class="rounded-circle" src="/img/testimonial/2.jpeg">
+                    <h5 class="name">Luke Gillingham</h5>
+                    <p class="title">Customer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
 <section class="team-style-one sec-pad">
 <div class="thm-container">
   <div class="sec-title text-center">
@@ -370,7 +412,7 @@
           <img src="/img/team/trader.jpg" alt="Awesome Image" height="400"/>
         </div><!-- /.img-box -->
         <div class="text-box text-center">
-          <h3>Kyan Koshaun</h3>
+          <h3>Roselina pieters</h3>
           <span>Trader</span>
           {{-- <div class="social">
                 <a href="#" class="fa fa-twitter"></a><!--
@@ -385,6 +427,49 @@
 </div><!-- /.thm-container -->
 </section><!-- /.team-style-one sec-pad --> 
 
+<section>
+<div class="containter d-flex justify-content-center">
+  <div class="sec-title text-center">
+    <span>Plans</span>
+    <h3>Choose a plan</h3>
+  </div><!-- /.sec-title text-center -->
+  <div class="panel pricing-table">
+    <div class="pricing-plan">
+      <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
+      <h2 class="pricing-header">Bronze</h2>
+      <ul class="pricing-features">
+        <li class="pricing-features-item">10% ROI</li>
+        <li class="pricing-features-item">No Dedicated Trader</li>
+      </ul>
+      <span class="pricing-price">$500</span>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
+    </div>
+    
+    <div class="pricing-plan">
+      <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+      <h2 class="pricing-header">Silver</h2>
+      <ul class="pricing-features">
+        <li class="pricing-features-item">15% ROI</li>
+        <li class="pricing-features-item">No Dedicated Trader</li>
+      </ul>
+      <span class="pricing-price">$1000</span>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
+    </div>
+    
+    <div class="pricing-plan">
+      <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
+      <h2 class="pricing-header">Gold</h2>
+      <ul class="pricing-features">
+        <li class="pricing-features-item">20% ROI</li>
+        <li class="pricing-features-item">Dedicated Trader</li>
+      </ul>
+      <span class="pricing-price">$10000</span>
+      <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
+    </div>
+    
+  </div>
+</div>
+</section>
 <!-- FAQ -->
 <div class="frequiently-ask-question section-padding-top bg-color-2" id="faq">
   <div class="container">
@@ -470,12 +555,12 @@
   <div class="row mt-5">
     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
       <div class="single-footer-top">
-        <p><i class="bitmex-icon-envelope"></i><span>Email: </span>realcapitalassets@gmail.com</p>
+        <p><i class="bitmex-icon-envelope"></i><span>Email: </span><a href="mailto:realcapitalassets@gmail.com">realcapitalassets@gmail.com</a></p>
       </div><!-- /.single-footer-top -->
     </div><!-- /.col-md-4 -->
     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
       <div class="single-footer-top">
-        <p><i class="bitmex-icon-phone-call"></i><span>Call: </span>+1 978 464 1094</p>
+        <p><i class="bitmex-icon-phone-call"></i><span>Whatsapp: </span><a href="https://api.whatsapp.com/send?phone=+19784641094">+1 978 464 1094</a></p>
       </div><!-- /.single-footer-top -->
     </div><!-- /.col-md-4 -->
     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -582,7 +667,7 @@
   <div class="sidebar-content">
       <h3>Realcapitalassets</h3>
       <p>You can reach us on any of this </p>
-      <p class="contact-info">realcapitalassets@gmail.com <br /> +1 978 464 1094 </p><!-- /.contact-info -->
+      <p class="contact-info"><a href="mailto:realcapitalassets@gmail.com">realcapitalassets@gmail.com</a> <br /><span>Whatsapp: </span><a href="https://api.whatsapp.com/send?phone=+19784641094">+1 978 464 1094</a></p></p><!-- /.contact-info -->
       <div class="social">
         <a href="#" class="fa fa-twitter"></a><!--
         --><a href="#" class="fa fa-facebook"></a><!--
@@ -591,159 +676,6 @@
       </div><!-- /.social -->
   </div><!-- /.sidebar-content -->
 </section><!-- /.hidden-sidebar -->
-<style>
-  /*** Pricing ***/
-/* .pricing-slider .pricing-box {
-background-color: rgba(255, 255, 255, 0.05);
-border-radius: 5px;
-overflow: hidden;
-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.05); }
-.pricing-slider .pricing-box .pricing-body .button {
-  color: #ffffff; }
-.pricing-slider .owl-controls .owl-pagination .owl-page {
-background: rgba(0, 0, 0, 0.4); } */
-.section-padding-top {
-padding-top: 120px;
-padding-bottom: 90px;
-}
-  .bg-color-2 {
-background-color: #061949; }
-.bg-color-2 .Realcapitalassetst-accordion .panel {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.05); }
-  .bg-color-2 .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
-    border-color: rgba(255, 255, 255, 0.05); }
-  .bg-color-2 .Realcapitalassetst-accordion .panel .panel-body {
-    color: #7695b5; }
-.bg-color-2 .panel-default > .panel-heading {
-  color: #ffffff; !important }
-  /* .section-padding {
-padding: 120px 0;
-}
-.pricing-slider .pricing-box {
--webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-margin: 0 15px 5px;
-}
-.pricing-slider .pricing-box .pricing-thumb {
-width: 100%;
-height: 150px;
--webkit-clip-path: ellipse(100% 100% at 50% 0%);
-clip-path: ellipse(100% 100% at 50% 0%);
-shape-margin: 2em;
-}
-.pricing-slider .pricing-box .pricing-thumb-1 {
-background: url(../images/pricing/1.jpg) no-repeat center center;
-background-size: cover;
-}
-.pricing-slider .pricing-box .pricing-thumb-2 {
-background: url(../images/pricing/2.jpg) no-repeat center center;
-background-size: cover;
-}
-.pricing-slider .pricing-box .pricing-thumb-3 {
-background: url(../images/pricing/3.jpg) no-repeat center center;
-background-size: cover;
-}
-.pricing-slider .pricing-box .pricing-thumb-4 {
-background: url(../images/pricing/4.jpg) no-repeat center center;
-background-size: cover;
-}
-.pricing-slider .pricing-box .pricing-body {
-padding-bottom: 20px;
-}
-.pricing-slider .pricing-box .pricing-body .icon {
-display: inline-block;
-position: relative;
--webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-}
-.pricing-slider .pricing-box .pricing-body h6 {
-margin-top: -25px;
-margin-bottom: 5px;
-}
-.pricing-slider .pricing-box .pricing-body p span.down {
-color: #f87a46;
-}
-.pricing-slider .pricing-box .pricing-body p .up {
-color: #35a947;
-}
-.pricing-slider .pricing-box .pricing-body .button {
-border: 1px solid #686868;
-padding: 6px 30px;
-margin-top: 10px;
-border-radius: 22px;
-color: #000000;
-font-weight: 700;
--webkit-transition: all .3s ease;
-transition: all .3s ease;
-}
-.pricing-slider .pricing-box .pricing-body .button:hover {
-background-image: -webkit-gradient(linear, left top, right top, from(#f87a46), to(#feb933));
-background-image: linear-gradient(to right, #f87a46, #feb933);
-border: 1px solid transparent;
-color: #ffffff;
-}
-.pricing-slider .owl-controls {
-text-align: center;
-margin-top: 30px;
-}
-.pricing-slider .owl-controls .owl-pagination .owl-page {
-height: 10px;
-width: 10px;
-border-radius: 50%;
-background: #cecece;
-display: inline-block;
-margin: 0 5px;
-}
-.pricing-slider .owl-controls .owl-pagination .owl-page.active {
-background-image: -webkit-gradient(linear, left top, right top, from(#f87a46), to(#feb933));
-background-image: linear-gradient(to right, #f87a46, #feb933);
-} */
-
-.Realcapitalassetst-accordion .panel .panel-heading {
-border: 0;
-background: transparent;
-padding: 0;
-border-top-left-radius: 0;
-border-top-right-radius: 0;
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a {
-padding: 30px 30px 30px 60px;
-display: block;
-position: relative;
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a:before {
-font-family: FontAwesome;
-left: 30px;
-position: absolute;
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true]:before {
-content: "\f106";
--webkit-transition: all .3s ease;
-transition: all .3s ease;
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false] {
-border-bottom: 0;
-}
-.Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false]:before {
-content: "\f106";
--webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
--webkit-transition: all .3s ease;
-transition: all .3s ease;
-}
-.Realcapitalassetst-accordion .panel .panel-collapse .panel-body {
-border-top: 0;
-padding: 30px 60px;
-}
-.Realcapitalassetst-accordion .panel + .panel {
-margin-top: 0;
-}
-
-</style>
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><i class="d-flex align-items-center fa fa-angle-up"></i></div>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\Admin;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -21,6 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+<<<<<<< HEAD
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('dashboard/withdraw', 'DashboardController@withdraw');
 Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
@@ -32,6 +34,20 @@ Route::post('/sell-crypto', 'DashboardController@sellCrypt');
 Route::post('/plan', 'DashboardController@planCoin');
 Route::post('/withdraws', 'DashboardController@withdrawCoin');
 
+=======
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('dashboard/withdraw', 'DashboardController@withdraw');
+    Route::get('dashboard/sell-crypto', 'DashboardController@sellcrypto');
+    Route::get('dashboard/buy-bitcoin', 'DashboardController@buybitcoin');
+    Route::get('dashboard/plan', 'DashboardController@plan');
+    Route::post('dashboard/plan', 'DashboardController@planPost');
+    Route::post('/buy-bitcoin', 'DashboardController@buyBit');
+    Route::post('/sell-crypto', 'DashboardController@sellCrypt');
+    Route::post('/plan', 'DashboardController@planCoin');
+    Route::post('/withdraw', 'DashboardController@withdrawCoin'); 
+});
+>>>>>>> 07e03910247d680a54dd485ad94e3e3ef4a38dfa
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', 'Admin\DashboardController@registerUser');
     Route::get('/user-edit/{id}', 'Admin\DashboardController@editUser');

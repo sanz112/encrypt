@@ -4036,3 +4036,269 @@ form.contact-form button.thm-btn {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.section-padding-top {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  }
+    .bg-color-2 {
+  background-color: #061949; }
+  .bg-color-2 .Realcapitalassetst-accordion .panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.05); }
+    .bg-color-2 .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
+      border-color: rgba(255, 255, 255, 0.05); }
+    .bg-color-2 .Realcapitalassetst-accordion .panel .panel-body {
+      color: #7695b5; }
+  .bg-color-2 .panel-default > .panel-heading {
+    color: #ffffff; !important }
+  
+  .Realcapitalassetst-accordion .panel .panel-heading {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a {
+  padding: 30px 30px 30px 60px;
+  display: block;
+  position: relative;
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a:before {
+  font-family: FontAwesome;
+  left: 30px;
+  position: absolute;
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=true]:before {
+  content: "\f106";
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false] {
+  border-bottom: 0;
+  }
+  .Realcapitalassetst-accordion .panel .panel-heading .panel-title a[aria-expanded=false]:before {
+  content: "\f106";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  }
+  .Realcapitalassetst-accordion .panel .panel-collapse .panel-body {
+  border-top: 0;
+  padding: 30px 60px;
+  }
+  .Realcapitalassetst-accordion .panel + .panel {
+  margin-top: 0;
+  }
+  
+  .panel {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 25px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .pricing-table {
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 900px) {
+    .pricing-table {
+      flex-direction: row;
+    }
+  }
+  
+  .pricing-table * {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .pricing-plan {
+    border-bottom: 1px solid #e1f1ff;
+    padding: 25px;
+  }
+  
+  .pricing-plan:last-child {
+    border-bottom: none;
+  }
+  
+  @media (min-width: 900px) {
+    .pricing-plan {
+      border-bottom: none;
+      border-right: 1px solid #e1f1ff;
+      flex-basis: 100%;
+      padding: 25px 50px;
+    }
+  
+    .pricing-plan:last-child {
+      border-right: none;
+    }
+  }
+  
+  .pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+  
+  .pricing-header {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .pricing-features {
+    color: #016FF9;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 50px 0 25px;
+  }
+  
+  .pricing-features-item {
+    border-top: 1px solid #e1f1ff;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    list-style: none;
+  }
+  
+  .pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+  }
+  
+  .pricing-price {
+    color: #016FF9;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .pricing-button {
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348EFE;
+    display: inline-block;
+    margin: 25px 0;
+    padding: 15px 35px;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .pricing-button:hover,
+  .pricing-button:focus {
+    background-color: #e1f1ff;
+  }
+  
+  .pricing-button.is-featured {
+    background-color: #48aaff;
+    color: #fff;
+  }
+  
+  .pricing-button.is-featured:hover,
+  .pricing-button.is-featured:active {
+    background-color: #269aff;
+  }
+
+  .testimonials-clean {
+    color:#313437;
+    background-color:#eef4f7;
+  }
+  
+  .testimonials-clean p {
+    color:#7d8285;
+  }
+  
+  .testimonials-clean h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+  }
+  
+  @media (max-width:767px) {
+    .testimonials-clean h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+  }
+  
+  .testimonials-clean .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto;
+  }
+  
+  .testimonials-clean .intro p {
+    margin-bottom:0;
+  }
+  
+  .testimonials-clean .people {
+    padding:50px 0 20px;
+  }
+  
+  .testimonials-clean .item {
+    margin-bottom:32px;
+  }
+  
+  @media (min-width:768px) {
+    .testimonials-clean .item {
+      height:220px;
+    }
+  }
+  
+  .testimonials-clean .item .box {
+    padding:30px;
+    background-color:#fff;
+    position:relative;
+  }
+  
+  .testimonials-clean .item .box:after {
+    content:'';
+    position:absolute;
+    left:30px;
+    bottom:-24px;
+    width:0;
+    height:0;
+    border:15px solid transparent;
+    border-width:12px 15px;
+    border-top-color:#fff;
+  }
+  
+  .testimonials-clean .item .author {
+    margin-top:28px;
+    padding-left:25px;
+  }
+  
+  .testimonials-clean .item .name {
+    font-weight:bold;
+    margin-bottom:2px;
+    color:inherit;
+  }
+  
+  .testimonials-clean .item .title {
+    font-size:13px;
+    color:#9da9ae;
+  }
+  
+  .testimonials-clean .item .description {
+    font-size:15px;
+    margin-bottom:0;
+  }
+  
+  .testimonials-clean .item img {
+    max-width:40px;
+    float:left;
+    margin-right:12px;
+    margin-top:-5px;
+  }
+  
+  
