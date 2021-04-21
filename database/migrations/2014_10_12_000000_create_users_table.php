@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
+            $table->decimal('wallet', 8, 2)->default(0);
             $table->string('usertype')->default('USER');
             $table->string('phone')->unique();
             $table->string('username')->unique();

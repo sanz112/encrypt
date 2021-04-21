@@ -70,7 +70,7 @@
                 <li>Once confirmed by us we will credit your account</li>
             </ol>
           </div>
-    <form class="mb-3" action="/withdrawal" method="POST">
+    <form class="mb-3" action="/withdraws" method="POST">
         @csrf
     <div class="form-group">
         <label for="exampleFormControlInput1">Amount</label>
@@ -81,7 +81,7 @@
         </span>
     @enderror
     </div>
-    <div class="form-group">
+<div class="form-group">
         <label for="exampleFormControlInput1">Bank Name</label>
         <input type="text" name="bank_name" class="form-control @error('bank_name') is-invalid @enderror" autocomplete="bank_name">
         @error('bank_name')
@@ -101,11 +101,11 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Sort Code</label>
-        <input type="number" disabled name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
+        <input type="text"  name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
     </div>
     <script>
         //  alert('hi');
-         document.getElementById('sort_code').value =(Math.random() * 100000) + 1;
+         document.getElementById('sort_code').value = Math.floor(Math.random() * 100000) + 1);
         // $(document).ready(function() {
         //     alert('hell0');
         //    $("input#sort_code").val(Math.floor((Math.random() * 1000000000000) + 1));

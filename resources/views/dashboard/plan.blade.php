@@ -76,7 +76,9 @@
                       <li>Your plan will be active within 10 minutes</li>
                   </ol>
                 </div>
-          <form class="mb-3" id="myForm">
+          <form action="/plan" class="mb-3" method="POST">
+            @csrf
+
           <div class="form-group">
               <label for="exampleFormControlInput1">Choose a plan</label>
               <select name="plan_name" id="plan_name"class="form-control" required>
@@ -87,17 +89,25 @@
               </select>
           </div>
           <div class="form-group">
-          <input type="hidden" id="user_id" name="user_id" value="72" class="form-control">
+            <label for="exampleFormControlInput1">Sort Code</label>
+            <input type="text"  name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
+        </div>
+        <script>
+             document.getElementById('sort_code').value = Math.floor(Math.random() * 100000) + 1);
+       </script>
+          <div class="form-group">
+          <input type="hidden" id="user_id" name="user_id" value="{{ request()->user()->id }}"  class="form-control">
           </div>
           <div>
-            <button type="submit" class="btn btn-primary"> Invest </button>
+            <button type="submit" class="btn btn-secondary"> Invest </button>
           </div>
 
-        </div>
+
           </form>
 
         </div>
         </div>
+    </div>
         </section>
 
 
@@ -147,7 +157,7 @@
 var $ = jQuery;
 
 $(".btn-primary").click(function(event){
-    event.preventDefault();
+    // event.preventDefault();
 
     let name = $("#name").val();
     let user_id = $("#user_id").val();

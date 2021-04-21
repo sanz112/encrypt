@@ -14,13 +14,14 @@ class CreateWithdrawsTable extends Migration
     public function up()
     {
         Schema::create('withdraws', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('amount');
             $table->string('bank_name');
             $table->bigInteger('account_number');
-            $table->integer('sort_code');
+            $table->text('sort_code');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

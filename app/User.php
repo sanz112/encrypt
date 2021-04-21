@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\BuyBitcoin;
+use App\SellCrypto;
+use App\Withdraw;
 
 class User extends Authenticatable
 {
@@ -40,7 +42,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function withdrawCoins(){
+        return $this->hasMany(Withdraw::class);
+    }
+
     public function buyBitcoins(){
         return $this->hasMany(BuyBitcoin::class);
     }
+
+    public function sellCryptos(){
+        return $this->hasMany(SellCrypto::class);
+    }
+
+    public function plans(){
+        return $this->hasMany(SellCrypto::class);
+    }
+
 }

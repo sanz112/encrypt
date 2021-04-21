@@ -21,6 +21,7 @@ class CreateSellCryptosTable extends Migration
             $table->string('bank_name');
             $table->string('account_number');
             $table->string('sort_code');
+            $table->string('status')->default('pending');
             $table->string('image');
             $table->timestamps();
         });

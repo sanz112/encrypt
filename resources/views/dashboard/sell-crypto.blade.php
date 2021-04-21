@@ -106,7 +106,7 @@
         <input type="number" disabled name="sort_code" id="sort_code" class="form-control"  autocomplete="sort_code">
     </div>
     <script>
-     document.getElementById('sort_code').value =(Math.random() * 100000) + 1;
+     document.getElementById('sort_code').value = Math.floor(Math.random() * 100000) + 1);
    </script>
     <div class="form-group">
     <input type="hidden" name="user_id" value="{{ request()->user()->id }}" class="form-control">

@@ -30,7 +30,7 @@ Route::post('dashboard/plan', 'DashboardController@planPost');
 Route::post('/buy-bitcoin', 'DashboardController@buyBit');
 Route::post('/sell-crypto', 'DashboardController@sellCrypt');
 Route::post('/plan', 'DashboardController@planCoin');
-Route::post('/withdraw', 'DashboardController@withdrawCoin');
+Route::post('/withdraws', 'DashboardController@withdrawCoin');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', 'Admin\DashboardController@registerUser');

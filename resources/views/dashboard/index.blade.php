@@ -65,9 +65,9 @@
           <div class="statistic-block block">
             <div class="progress-details d-flex align-items-end justify-content-between">
               <div class="title">
-                <div class="icon"><i class="icon-user-1"></i></div><strong>Wallet</strong>
+                <div class="icon"></div><strong> Your Wallet</strong>
               </div>
-              <div class="number dashtext-1">$0.00</div>
+              <div class="number dashtext-1">${{ $users->wallet }}</div>
             </div>
           </div>
         </div>
@@ -153,8 +153,34 @@
                   </thead>
                   <tbody>
 
-                                        No records yet!
-                                      </tbody>
+                    @forelse ($users->sellCryptos as $model)
+                    <tbody>
+
+                        <td>
+                            {{ $model->amount }}
+                          </td>
+                          <td>
+                            {{ $model->bank_name }}
+                          </td>
+                          <td>
+                            {{ $model->account_number }}
+                          </td>
+                          <td>
+                            {{ $model->sort_code }}
+                          </td>
+    <td>
+                            <span class="badge badge-danger">{{ $model->status}} </span>
+                           </td>
+
+                    </tbody>
+
+                    @empty
+                  <tbody>
+                    <td>
+                      <span>No records Found</span>
+                     </td>
+                  </tbody>
+                    @endforelse
                 </table>
               </div>
             </div>
@@ -235,7 +261,72 @@
                       <th>
                         Amount
                       </th>
+                      <th>
+                        Bank Name
+                      </th>
+                      <th>
+                        Account Number
+                      </th>
+                      <th>
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @forelse ($users->withdrawCoins as $model)
+                    <tbody>
 
+                      <tr>
+                        <td>
+                            {{ $model->amount }}
+                          </td>
+                          <td>
+                            {{ $model->bank_name }}
+                          </td>
+                          <td>
+                            {{ $model->account_number }}
+                          </td>
+                          <td>
+                            {{ $model->sort_code }}
+                          </td>
+    <td>
+                            <span class="badge badge-danger">{{ $model->status}} </span>
+                           </td>
+  </tr>
+                    </tbody>
+
+                    @empty
+                  <tbody>
+                    <td>
+                      <span>No records Found</span>
+                     </td>
+                  </tbody>
+                    @endforelse
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+
+              <h5 class="card-title">Investment Plans Table </h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>
+                        Investment Type
+                      </th>
+                      <th>
+                        Sort Code
+                      </th>
                       <th>
                         Status
                       </th>
@@ -243,13 +334,34 @@
                   </thead>
                   <tbody>
 
-                                        No records yet!
-                                      </tbody>
+                    @forelse ($users->plans as $model)
+                    <tbody>
+
+                        <td>
+                            {{ $model->plan_name }}
+                          </td>
+                          <td>
+                            {{ $model->sort_code }}
+                          </td>
+                            <td>
+                            <span class="badge badge-danger">{{ $model->status}} </span>
+                           </td>
+
+                    </tbody>
+
+                    @empty
+                  <tbody>
+                    <td>
+                      <span>No Investment Plans</span>
+                     </td>
+                  </tbody>
+                    @endforelse
                 </table>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
 
