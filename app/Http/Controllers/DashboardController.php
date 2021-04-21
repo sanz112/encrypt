@@ -17,8 +17,9 @@ class DashboardController extends Controller
     }
 
 
-    public function index() {
-        return view('dashboard.index');
+    public function index(User $users) {
+        $users =User::find(auth()->user()->id);
+        return view('dashboard.index')->with('users', $users);
     }
 
 
@@ -30,8 +31,8 @@ class DashboardController extends Controller
         return view('dashboard.sell-crypto');
     }
 
-    public function buybitcoin() {
-        return view('dashboard.buy-bitcoin');
+    public function buybitcoin(User $users) {
+        return view('dashboard.buy-bitcoin')->with('users', $users);
     }
 
     public function plan() {
@@ -53,6 +54,7 @@ class DashboardController extends Controller
             'amount' => $request->input('amount'),
             'wallet_name' => $request->input('wallet_name'),
             'hash_key' => $request->input('hash_key'),
+            'user_id' => $request->input('user_id'),
         ]);
 return redirect('/dashboard/buy-bitcoin')->with('status', 'We will validate your request and send you a mail when it is completed');
     }
@@ -71,6 +73,7 @@ return redirect('/dashboard/buy-bitcoin')->with('status', 'We will validate your
             'bank_name' => $request->input('bank_name'),
             'account_number' => $request->input('account_number'),
             'sort_code' => $request->input('sort_code'),
+            'user_id' => $request->input('user_id'),
             'image' => $request->input('image'),
         ]);
 return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has been confirmed. We will forward you your money in less than 48 hours');
@@ -85,6 +88,7 @@ return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has
 
         $crypt = Plan::create([
             'plan_name' => $request->input('plan_name'),
+            'user_id' => $request->input('user_id'),
         ]);
 return redirect('/dashboard/plan')->with('status', 'You have Invested'.$request->input('plan_name').'Expect 10% return by the end of the month');
     }
@@ -102,6 +106,7 @@ return redirect('/dashboard/plan')->with('status', 'You have Invested'.$request-
             'bank_name' => $request->input('bank_name'),
             'account_number' =>  $request->input('acount_name'),
             'sort_code' =>  $request->input('sort_code'),
+            'user_id' => $request->input('user_id'),
         ]);
 return redirect('/dashboard/withdraw')->with('status', 'You have withdrawn'.$request->input('amount').'from your account');
     }

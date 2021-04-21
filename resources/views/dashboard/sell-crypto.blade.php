@@ -72,26 +72,44 @@
                 <li>Once confirmed by us we will credit your account</li>
             </ol>
         </div>
-    <form action="/sell-crypto" method="POST" enctype="multipart/form-data">
+    <form class="mb-3" action="/sell-crypto" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="form-group">
         <label for="exampleFormControlInput1">Amount</label>
-        <input type="text" name="amount" class="form-control" required autocomplete="amount">
+        <input type="text" name="amount" class="form-control @error('amount') is-invalid @enderror"  autocomplete="amount">
+        @error('amount')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Bank Name</label>
-        <input type="text" name="bank_name" class="form-control" required autocomplete="bank_name">
+        <input type="text" name="bank_name" class="form-control @error('bank_name') is-invalid @enderror"  autocomplete="bank_name">
+        @error('bank_name')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Account Number</label>
-        <input type="text" name="account_number" class="form-control" required autocomplete="account_number">
+        <input type="text" name="account_number" class="form-control @error('account_number') is-invalid @enderror"  autocomplete="account_number">
+        @error('account_number')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Sort Code</label>
-        <input type="text" name="sort_code" class="form-control" required autocomplete="sort_code">
+        <input type="number" disabled name="sort_code" id="sort_code" class="form-control"  autocomplete="sort_code">
     </div>
+    <script>
+     document.getElementById('sort_code').value =(Math.random() * 100000) + 1;
+   </script>
     <div class="form-group">
-    <input type="hidden" name="user_id" value="72" class="form-control">
+    <input type="hidden" name="user_id" value="{{ request()->user()->id }}" class="form-control">
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Image Attachment</label>
@@ -104,7 +122,7 @@
 </div>
 </div>
 </section>
-<footer class="footer">
+<footer class="mt-3 footer">
     <div class="footer__block block no-margin-bottom">
       <div class="container-fluid text-center">
         <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>

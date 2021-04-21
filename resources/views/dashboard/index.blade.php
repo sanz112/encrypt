@@ -188,23 +188,32 @@
                       </th>
                     </tr>
                   </thead>
+                  @forelse ($users->buyBitcoins as $model)
                   <tbody>
 
-                                        <tr>
-                      <td>
-                        1000
-                      </td>
-                      <td>
-                        Fbgv
-                      </td>
-                      <td>
-                       Bvvvvv
-                      </td>
-                      <td>
-                                              <span class="badge badge-danger">Pending</span>
-                                             </td>
-                    </tr>
-                                      </tbody>
+                    <tr>
+  <td>
+    {{ $model->amount }}
+  </td>
+  <td>
+    {{ $model->wallet_name }}
+  </td>
+  <td>
+    {{ $model->hash_key }}
+  </td>
+  <td>
+                          <span class="badge badge-danger">{{ $model->status}} </span>
+                         </td>
+</tr>
+                  </tbody>
+
+                  @empty
+                <tbody>
+                  <td>
+                    <span>No records Found</span>
+                   </td>
+                </tbody>
+                  @endforelse
                 </table>
               </div>
             </div>
@@ -247,7 +256,7 @@
           </div>
   </section>
 
-  <footer class="footer">
+  <footer class="mt-3 footer">
     <div class="footer__block block no-margin-bottom">
       <div class="container-fluid text-center">
         <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>

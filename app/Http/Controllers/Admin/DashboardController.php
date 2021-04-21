@@ -49,7 +49,8 @@ class DashboardController extends Controller
         // ]);
 
 
-        $users->name = $request->input('name');
+        $users->fname = $request->input('fname');
+        $users->lname = $request->input('lname');
         $users->username = $request->input('username');
         $users->email = $request->input('email');
         $users->phone = $request->input('phone');

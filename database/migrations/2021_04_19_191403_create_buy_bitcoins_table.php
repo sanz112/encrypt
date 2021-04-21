@@ -14,12 +14,17 @@ class CreateBuyBitcoinsTable extends Migration
     public function up()
     {
         Schema::create('buy_bitcoins', function (Blueprint $table) {
-            $table->id();
+            // Schema::enableForeignKeyConstraints();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreignId('user_id')->default(1)->constrained('users');
             $table->string('amount');
             $table->string('wallet_name');
             $table->string('hash_key');
             $table->string('status')->default('pending');
             $table->timestamps();
+            // $table->index('user_id');
         });
     }
 
