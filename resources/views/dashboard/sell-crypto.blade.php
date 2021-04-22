@@ -67,11 +67,16 @@
         <div class="alert alert-primary" role="alert">
             <h2>Steps To Follow To Sell Your Bitcoin To Us</h2><hr>
             <ol>
-                <li>Send your Bitcoin to this Wallet Address <mark>35yNEssnupUWZjZpCtmraFjJkxM5Q8RQmW</mark></li>
+                <li>Send your Bitcoin to this Wallet Address <mark>{{ $users->bitcoinAddress }}</mark></li>
                 <li>Fill the form below and attach a screenshot of what you sent to our Wallet</li>
                 <li>Once confirmed by us we will credit your account</li>
             </ol>
         </div>
+        <script>
+
+            alert(`{{ $users->bitcoinAddress }}`);
+
+            </script>
     <form class="mb-3" action="/sell-crypto" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="form-group">

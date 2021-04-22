@@ -28,6 +28,7 @@ class DashboardController extends Controller
     }
 
     public function sellcrypto(User $users) {
+        $users = User::find(1);
         return view('dashboard.sell-crypto')->with('users', $users);;
     }
 

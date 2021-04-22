@@ -334,7 +334,7 @@
                   </thead>
                   <tbody>
 
-                    {{-- @forelse ($users->plans as $model) --}}
+                    @forelse ($users->plans as $model)
                     <tbody>
 
                         <td>
@@ -348,14 +348,14 @@
                            </td>
 
                     </tbody>
-{{--
+
                     @empty
                   <tbody>
                     <td>
                       <span>No Investment Plans</span>
                      </td>
                   </tbody>
-                    @endforelse --}}
+                    @endforelse
                 </table>
               </div>
             </div>

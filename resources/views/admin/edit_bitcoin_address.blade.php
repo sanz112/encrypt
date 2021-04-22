@@ -59,7 +59,7 @@
           <div class="card">
             <div class="card-header">
 
-              <h5 class="card-title">Edit Users</h5>
+              <h5 class="card-title">Edit Admin Infomation</h5>
             </div>
             <div class="card-body">
                     <form action="/update_bitcoin_address/{{ $users->id }}" method="POST">
@@ -69,6 +69,25 @@
                           <label for="name" class="col-sm-2 col-form-label">Bitcoin Address</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" value="{{ $users->bitcoinAddress }}" name="bitcoinAddress"  id="bitcoinAddress" placeholder="Bitcoin Address">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-10">
+                            <button type="submit" class="btn btn-success">Update</button>
+                            <a href="/admin" type="submit" class="btn btn-danger">Cancel</a>
+                          </div>
+                        </div>
+                      </form>
+
+                      <br>
+
+                      <form action="/update_bitcoin_address/{{ $users->id }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <div class="form-group row">
+                          <label for="name" class="col-sm-2 col-form-label">Information admin wish to send to the front page</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" value="{{ $users->info }}" name="bitcoinAddress"  id="bitcoinAddress" placeholder="Bitcoin Address">
                           </div>
                         </div>
                         <div class="form-group row">

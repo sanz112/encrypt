@@ -19,10 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('lname');
             $table->string('email')->unique();
             $table->decimal('wallet', 8, 2)->default(0);
-            $table->string('usertype')->default('USER');
+            $table->enum('usertype', ['ADMIN', 'USER'])->default('USER');
             $table->string('phone')->unique();
             $table->string('username')->unique();
             $table->string('country');
+            $table->longText('info')->nullable();
             $table->string('bitcoinAddress')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

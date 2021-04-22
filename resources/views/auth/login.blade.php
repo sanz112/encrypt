@@ -48,7 +48,7 @@
                             border-radius: 3px;
                         }
                         .signup-form {
-                            width: 450px;
+                            max-width: 450px;
                             margin: 0 auto;
                             padding: 30px 0;
                               font-size: 15px;
