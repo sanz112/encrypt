@@ -22,11 +22,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="margin: 0;">
 <main>
 <div class="container">
-    <div style="height: 100%;" class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-8">
+    <div>
+    <div class="row">
+        <div   style="height: 100%; width: 100%; display:flex; justify-content: center; align-items: center;" class="col-md-12">
 
             <div class="card">
                 {{-- <div class="card-header">{{ __('Login') }}</div> --}}
@@ -49,6 +50,7 @@
                         }
                         .signup-form {
                             max-width: 450px;
+
                             margin: 0 auto;
                             padding: 30px 0;
                               font-size: 15px;
@@ -166,7 +168,6 @@
             </div>
         </div>
     </div>
-</div>
 </main>
 </body>
 </html>

@@ -21,9 +21,9 @@
 </head>
 <body>
 <main>
-<div class="container">
-    <div style="height: 100%;" class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-8">
+<div  class="container">
+    <div class="row">
+        <div style="height: 100%; width: 100%;  display:flex; justify-content: center; align-items: center;"  class="col-md-12">
 
             <div class="card">
                 <div class="card-body">
@@ -42,7 +42,7 @@
 	border-radius: 3px;
 }
 .signup-form {
-	width: 450px;
+	max-width: 450px;
 	margin: 0 auto;
 	padding: 30px 0;
   	font-size: 15px;
