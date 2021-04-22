@@ -9,9 +9,7 @@
 
           <div class="title">
             <h1 class="h5"{{ Auth::user()->username }}</h1>
-            {{-- <p>
-                                              Pending
-                                            </p> --}}
+
           </div>
         </div>
         <ul class="list-unstyled">
@@ -52,7 +50,6 @@
   </div>
 </div>
 <div>
-
 
     </div><section class="no-padding-top no-padding-bottom">
   <div class="container-fluid">
@@ -102,15 +99,12 @@
     <div class="form-group">
         <label for="exampleFormControlInput1">Sort Code</label>
         <input type="text"  name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
+        <script>
+            document.getElementById('sort_code').value =Math.floor(Math.random() * 100000) + 1;
+      </script>
+
     </div>
-    <script>
-        //  alert('hi');
-         document.getElementById('sort_code').value = Math.floor(Math.random() * 100000) + 1);
-        // $(document).ready(function() {
-        //     alert('hell0');
-        //    $("input#sort_code").val(Math.floor((Math.random() * 1000000000000) + 1));
-        //  });
-   </script>
+
     <div class="form-group">
     <input type="hidden" name="user_id" value="{{ request()->user()->id }}" class="form-control">
     </div>
@@ -122,33 +116,32 @@
 </div>
 </section>
 <footer class="mt-3 footer">
-  <div class="footer__block block no-margin-bottom">
-    <div class="container-fluid text-center">
-      <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
+    <div class="footer__block block no-margin-bottom">
+      <div class="container-fluid text-center">
+        <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
+      </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
     </div>
     </div>
     <style>
         .float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:20px;
-	right:20px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
   font-size:30px;
-	box-shadow: 1px 2px 2px #999;
+    box-shadow: 1px 2px 2px #999;
   z-index:100;
 }
 
 .my-float{
-	margin-top:16px;
+    margin-top:16px;
 }
 </style>
 <a href="https://api.whatsapp.com/send?phone=19784641094&amp;text=Good%20Day." class="float" target="_blank">
@@ -164,7 +157,8 @@
     <script src="/js/plug/chart.js"></script>
     <script src="/js/plug/front.js"></script>
     <script>
-    <script>
+
+
       var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
@@ -184,5 +178,4 @@
           console.log("API error");
       });
   </script>
-
 @endsection

@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use App\BuyBitcoin;
 use App\SellCrypto;
 use App\Withdraw;
+use App\Plan;
 
 class User extends Authenticatable
 {
@@ -55,7 +56,7 @@ class User extends Authenticatable
     }
 
     public function plans(){
-        return $this->hasMany(SellCrypto::class);
+        return $this->hasOne(Plan::class);
     }
 
 }

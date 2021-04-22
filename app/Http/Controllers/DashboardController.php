@@ -83,8 +83,8 @@ return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has
     public function planCoin(Request $request) {
 
         $request->validate([
-            'plan_name' => 'required',
-            'sort_code'=> 'required'
+            'plan_name' => ['required', 'string', 'max:200'],
+            'sort_code'=> ['required', 'string', 'unique:plans'],
         ]);
 
         $crypt = Plan::create([
@@ -92,7 +92,7 @@ return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has
             'sort_code' => $request->input('sort_code'),
             'user_id' => $request->input('user_id'),
         ]);
-return redirect('/dashboard/plan')->with('status', 'You have Invested into'.$request->input('plan_name').'Expect 10% return by the end of the month');
+return redirect('/dashboard/plan')->with('status', 'You have Invested into'.' '.$request->input('plan_name').' Expect 10% return by the end of the month');
     }
 
     public function withdrawCoin(Request $request) {
@@ -100,7 +100,7 @@ return redirect('/dashboard/plan')->with('status', 'You have Invested into'.$req
             'amount' => 'required|integer',
             'bank_name' => ['required', 'string', 'max:200'],
             'account_number' => ['required', 'string', 'max:20'],
-            'sort_code' => ['required', 'string', 'unique:withdraws'],
+            // 'sort_code' => ['required', 'string', 'unique:withdraws'],
         ]);
 
 

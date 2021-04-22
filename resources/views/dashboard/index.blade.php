@@ -333,34 +333,29 @@
                     </tr>
                   </thead>
                   <tbody>
-<<<<<<< HEAD
 
-                    @forelse ($users->plans as $model)
+                    {{-- @forelse ($users->plans as $model) --}}
                     <tbody>
 
                         <td>
-                            {{ $model->plan_name }}
+                            {{ $users->plans->plan_name }}
                           </td>
                           <td>
-                            {{ $model->sort_code }}
+                            {{ $users->plans->sort_code }}
                           </td>
                             <td>
-                            <span class="badge badge-danger">{{ $model->status}} </span>
+                            <span class="badge badge-danger">{{ $users->plans->status}} </span>
                            </td>
 
                     </tbody>
-
+{{--
                     @empty
                   <tbody>
                     <td>
                       <span>No Investment Plans</span>
                      </td>
                   </tbody>
-                    @endforelse
-=======
-                  No records yet!
-                </tbody>
->>>>>>> 07e03910247d680a54dd485ad94e3e3ef4a38dfa
+                    @endforelse --}}
                 </table>
               </div>
             </div>

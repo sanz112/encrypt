@@ -89,10 +89,11 @@
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Sort Code</label>
-            <input type="text"  name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
+            <input type="number"  name="sort_code" id="sort_code" class="form-control" autocomplete="sort_code">
         </div>
         <script>
-             document.getElementById('sort_code').value = Math.floor(Math.random() * 100000) + 1);
+             document.getElementById('sort_code').value =Math.floor(Math.random() * 100000) + 1;
+             document.getElementById('sort_code').setAttribute('value', Math.floor(Math.random() * 100000) + 1);
        </script>
           <div class="form-group">
           <input type="hidden" id="user_id" name="user_id" value="{{ request()->user()->id }}"  class="form-control">
@@ -109,105 +110,67 @@
     </div>
         </section>
 
-
-<footer class="mt-3 footer">
-    <div class="footer__block block no-margin-bottom">
-      <div class="container-fluid text-center">
-        <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-    </div>
-    </div>
-    <style>
-        .float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:20px;
-	right:20px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 1px 2px 2px #999;
-  z-index:100;
-}
-
-.my-float{
-	margin-top:16px;
-}
-</style>
-<a href="https://api.whatsapp.com/send?phone=19784641094&amp;text=Good%20Day." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
-    <script src="/js/plug/jquery.min.js"></script>
-    <script src="/js/plug/popper.js"> </script>
-    <script src="/js/plug/bootstrap.js"></script>
-    <script src="/js/plug/cookie.js"> </script>
-    <script src="/js/plug/chrt.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/js/plug/validate.js"></script>
-    <script src="/js/plug/chart.js"></script>
-    <script src="/js/plug/front.js"></script>
-    <script>
-
-var $ = jQuery;
-
-$(".btn-primary").click(function(event){
-    // event.preventDefault();
-
-    let name = $("#name").val();
-    let user_id = $("#user_id").val();
-     let _token = $('meta[name="csrf-token"]').attr('content');
-
-    $.ajax({
-      url: "plan",
-      type:"POST",
-      data:{
-        name:name,
-        user_id:user_id,
-        _token:_token
-      },
-      success:function(response){
-        console.log(response);
-        if(response.success) {
-
-         swal({
-           title: "Success!",
-           text: `${response.success}`,
-           icon: "success",
-           button: "OK",
-         })
-         $("#myForm")[0].reset();
-        }else{
-         swal('Oops!', `${response.error}`, 'error');
-          $("#myForm")[0].reset();
+        <footer class="mt-3 footer">
+            <div class="footer__block block no-margin-bottom">
+              <div class="container-fluid text-center">
+                <p class="no-margin-bottom">2021 &copy; Realcapitalassets. All Rights Reserved.</p>
+              </div>
+            </div>
+          </footer>
+            </div>
+            </div>
+            <style>
+                .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:20px;
+            right:20px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+          font-size:30px;
+            box-shadow: 1px 2px 2px #999;
+          z-index:100;
         }
-      },
 
-    });
+        .my-float{
+            margin-top:16px;
+        }
+        </style>
+        <a href="https://api.whatsapp.com/send?phone=19784641094&amp;text=Good%20Day." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+            <script src="/js/plug/jquery.min.js"></script>
+            <script src="/js/plug/popper.js"> </script>
+            <script src="/js/plug/bootstrap.js"></script>
+            <script src="/js/plug/cookie.js"> </script>
+            <script src="/js/plug/chrt.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="/js/plug/validate.js"></script>
+            <script src="/js/plug/chart.js"></script>
+            <script src="/js/plug/front.js"></script>
+            <script>
 
-});
 
-      var formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    });
+              var formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            });
 
 
-      jQuery.ajax({
-          url: "https://min-api.cryptocompare.com/data/pricemulti",
-          data: "fsyms=BTC,ETH,DASH,LTC&tsyms=USD",
-          dataType: 'json',
-      }).done(function(data) {
-          jQuery("#dashCoin").html('$' + data.DASH.USD);
-          jQuery("#ethCoin").html('$' + data.ETH.USD);
-          jQuery("#btc").html('$' + data.BTC.USD);
-          jQuery("#liteCoin").html('$' + data.LTC.USD);
-      }).fail(function() {
-          console.log("API error");
-      });
-  </script>
-@endsection
+              jQuery.ajax({
+                  url: "https://min-api.cryptocompare.com/data/pricemulti",
+                  data: "fsyms=BTC,ETH,DASH,LTC&tsyms=USD",
+                  dataType: 'json',
+              }).done(function(data) {
+                  jQuery("#dashCoin").html('$' + data.DASH.USD);
+                  jQuery("#ethCoin").html('$' + data.ETH.USD);
+                  jQuery("#btc").html('$' + data.BTC.USD);
+                  jQuery("#liteCoin").html('$' + data.LTC.USD);
+              }).fail(function() {
+                  console.log("API error");
+              });
+          </script>
+        @endsection
