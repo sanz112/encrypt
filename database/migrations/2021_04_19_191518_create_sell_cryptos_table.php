@@ -22,7 +22,7 @@ class CreateSellCryptosTable extends Migration
             $table->string('account_number');
             $table->string('sort_code');
             $table->string('status')->default('pending');
-            $table->string('image');
+            $table->string('image_path');
             $table->timestamps();
         });
     }

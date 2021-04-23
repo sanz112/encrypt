@@ -73,6 +73,7 @@
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table">
+                    <span class="badge badge-danger">{{ $plans->$users->email }} </span>
                   <thead class="text-primary">
                     <tr>
                         <th>
@@ -98,28 +99,87 @@
                       </th>
                     </tr>
                   </thead>
-                  {{-- @foreach ($users as $user) --}}
+                  @forelse ($plans as $model)
                   <tbody>
-                    <td>1</td>
-                    <td>dsfdsgdfg</td>
-                    <td>dsfdsgdf</td>
-                    <td>dsfdsgdf</td>
-                    <td>dsfdsgdf</td>
-                    <td>dsfdsgdf</td>
-                    <td>dsfdsgdf</td>
-                    <td><a href="/user-edit" class="btn btn-success">Approve</a></td>
-                    <td><form action="/deleteusers" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Disapprove</button>
-                        </form>
-                    </td>
-                                        {{-- No Users Registered yet records yet!
-                                      --}}
+
+                    <td>
+                        {{ $model->id }}
+                      </td>
+                      <td>
+                        {{ $model->plan_name }}
+                      </td>
+                      <td>
+                          {{ $model->user_id }}
+                        </td>
+
+                          {{-- <td>
+                          <span class="badge badge-danger">{{ $model->users->email }} </span>
+                         </td> --}}
+
+                         <td><a href="/user-edit" class="btn btn-success">Approve</a></td>
+                           <td><form action="/deleteusers" method="POST">
+                               @csrf
+                               @method('DELETE')
+                               <button type="submit" class="btn btn-danger">Disapprove</button>
+                               </form>
+                           </td>
+
+                  </tbody>
+
+                  @empty
+                <tbody>
+                  <td>
+                    <span>No Investment Plans</span>
+                   </td>
+                </tbody>
+                @endforelse
+                  {{-- @endforelse
+                    @forelse ($users as $user)
+                    <tbody>
+                        <td>
+                            {{ $user->plans->plan_name }}
+                          </td>
+                        <td>
+                            {{ $user->email}}
+                          </td>
+                          <td>
+                            {{ $user->phone}}
+                          </td>
+                          <td>
+                            {{ $user->username}}
+                          </td>
+                          <td>
+                            {{ $user->usertype}}
+                          </td>
+
+                          {{-- <td>
+                            {{ $plan->user_id }}
+                          </td> --}}
+                          {{-- <td>
+                            {{ $plan->users->lname }}
+                          </td> --}}
+                          {{-- <td>
+                            {{ $users->plans->sort_code }}
+                          </td> --}}
+
+                           {{-- <td><a href="/user-edit" class="btn btn-success">Approve</a></td>
+                           <td><form action="/deleteusers" method="POST">
+                               @csrf
+                               @method('DELETE')
+                               <button type="submit" class="btn btn-danger">Disapprove</button>
+                               </form>
+                           </td>
+                    </tbody>
+
+                    @empty
+                  <tbody>
+                    <td>
+                      <span>No Investment Plans</span>
+                     </td>
+                  </tbody>
+                    @endforelse --}}
 
 
-                                    </tbody>
-                                    {{-- @endforeach --}}
                 </table>
               </div>
             </div>

@@ -338,13 +338,13 @@
                     <tbody>
 
                         <td>
-                            {{ $users->plans->plan_name }}
+                            {{ $model->plan_name }}
                           </td>
                           <td>
-                            {{ $users->plans->sort_code }}
+                            {{ $model->sort_code }}
                           </td>
                             <td>
-                            <span class="badge badge-danger">{{ $users->plans->status}} </span>
+                            <span class="badge badge-danger">{{ $model->status }} </span>
                            </td>
 
                     </tbody>

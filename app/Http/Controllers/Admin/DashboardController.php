@@ -3,14 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Plan;
 use Illuminate\Http\Request;
 use App\User;
 
 class DashboardController extends Controller
 {
 
-    public function plan() {
-        return view('admin.plan');
+    public function plan(Plan $plans) {
+        $plans = Plan::all();
+        // $plans =Plan::find(1);
+        return view('admin.plan')->with('plans', $plans);
     }
 
     public function buyer() {
@@ -77,5 +80,12 @@ class DashboardController extends Controller
         $users->bitcoinAddress = $request->input('bitcoinAddress');
         $users->update();
         return redirect('/admin')->with('success', 'Your Bitcoin Address has been updated');
+    }
+
+    public function info(Request $request, $id) {
+        $users = User::findorfail($id);
+        $users->info = $request->input('info');
+        $users->update();
+        return redirect('/admin')->with('success', 'Your information will be displayed on the dashboard page');
     }
 }

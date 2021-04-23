@@ -118,7 +118,7 @@
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Image Attachment</label>
-        <input type="file" name="image" class="form-control">
+        <input type="file" name="image_path" id="image_path" class="form-control">
     </div>
     <div>
         <button type="submit" class="btn btn-primary"> SELL </button>

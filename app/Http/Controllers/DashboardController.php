@@ -28,7 +28,7 @@ class DashboardController extends Controller
     }
 
     public function sellcrypto(User $users) {
-        $users = User::find(1);
+        $users =User::find(auth()->user()->id);
         return view('dashboard.sell-crypto')->with('users', $users);;
     }
 
@@ -62,20 +62,26 @@ return redirect('/dashboard/buy-bitcoin')->with('status', 'We will validate your
 
     public function sellCrypt(Request $request) {
 
+        $test=$request->file('image');
+
         $request->validate([
             'amount' => 'required|integer',
             'bank_name' => ['required', 'string', 'max:200'],
             'account_number' => ['required', 'string', 'max:20'],
             'sort_code' => ['required', 'string', 'unique:sell_cryptos'],
-            'image' =>['required', 'mimes:jpg|png|jpeg'],
+            'image_path' =>['required', 'mimes:jpg,png,jpeg'],
         ]);
+
+        $newImageName = time().'-'.$request->sort_code.'.'.$request->image_path->extension();
+        $request->image_path->move(public_path('images'),  $newImageName);
+
     $crypt = SellCrypto::create([
             'amount' => $request->input('amount'),
             'bank_name' => $request->input('bank_name'),
             'account_number' => $request->input('account_number'),
             'sort_code' => $request->input('sort_code'),
             'user_id' => $request->input('user_id'),
-            'image' => $request->input('image'),
+            'image_path' =>  $newImageName,
         ]);
 return redirect('/dashboard/sell-crypto')->with('status', 'Once your request has been confirmed. We will forward you your money in less than 48 hours');
 

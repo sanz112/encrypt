@@ -10,6 +10,7 @@ use App\SellCrypto;
 use App\Withdraw;
 use App\Plan;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -58,5 +59,8 @@ class User extends Authenticatable
     public function plans(){
         return $this->hasMany(Plan::class);
     }
+    // public function users() {
+    //     return $this->hasMany(Plan::class);
+    // }
 
 }
