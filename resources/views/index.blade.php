@@ -50,60 +50,33 @@
               <ul class="nav navbar-nav navigation-box">
                   <li class="current">
                       <a href="#!">Home</a>
-                      {{-- <ul class="sub-menu">
-                          <li><a href="index.html">Home Page One</a></li>
-                          <li><a href="index2.html">Home Page Two</a></li>
-                          <li><a href="index3.html">Home Page Three</a></li>
-                          <li><a href="index4.html">Home Page Four</a></li>
-                          <li><a href="index5.html">Home Page Five</a></li>
-                      </ul><!-- /.sub-menu --> --}}
                   </li>
                   <li> <a href="#about">About</a> </li>
                   <li>
                       <a href="#faq">FAQ</a>
-                      {{-- <ul class="sub-menu">
-                          <li><a href="services.html">Service Page</a></li>
-                          <li><a href="service-details.html">Service Details</a></li>
-                      </ul><!-- /.sub-menu --> --}}
                   </li>
-                  {{-- <li>
-                      <a href="#">Pages</a>
-                      <ul class="sub-menu">
-                          <li><a href="404.html">404 Page</a></li>
-                          <li><a href="how-it-works.html">How it works</a></li>
-                          <li>
-                            <a href="team.html">Our Team</a>
-                            {{-- <ul class="sub-menu">
-                              <li><a href="team.html">Team Style One</a></li>
-                              <li><a href="team2.html">Team Style Two</a></li>
-                              <li><a href="team3.html">Team Style Three</a></li>
-                            </ul><!-- /.sub-menu --> --}}
-                          {{-- </li>
-                          <li><a href="what-is-bit.html">What Is Bitcoin</a></li>
-                          <li><a href="exchange.html">Exchange</a></li>
-                          <li><a href="charts.html">Charts</a></li>
-                      </ul><!-- /.sub-menu -->
-                  </li> --}}
-                  {{-- <li>
-                      <a href="blog.html">News</a>
-                      {{-- <ul class="sub-menu">
-                          <li><a href="blog.html">News Grid</a></li>
-                          <li><a href="blog-details.html">News Details</a></li>
-                      </ul><!-- /.sub-menu -->
-                  </li> --}}
+
                   <li> <a href="#contact">Contact</a> </li>
                   <li  class="valign-middle"> <a style="color: #fff" href="/login">Login</a> </li>
                   <li  class="valign-middle"> <a style="color: yellow"href="/register">Register</a> </li>
               </ul>
           </div><!-- /.navbar-collapse -->
           <div class="right-side-box">
-              {{-- <a href="#test-search" class="search-icon popup-with-zoom-anim bitmex-icon-search"></a><!-- --}}
+
           <a href="#hidden-sidebar" class="side-menu-icon bitmex-icon-menu side-nav-opener"></a>
-          </div><!-- /.right-side-box -->
+          </div>
       </div><!-- /.container -->
   </nav>
 </header><!-- /.header -->
 
+<style>
+    @media screen and (max-width: 992px) {
+    .right-side-box {
+        margin-top: 5px;
+    }
+    }
+
+    </style>
 
 <div id="minimal-bootstrap-carousel" class="carousel slide carousel-fade slider-home-one" data-ride="carousel">
 <div id="particles-js"></div><!-- /#particles-js -->
@@ -115,7 +88,7 @@
               <div class="thm-container">
                   <div class="box valign-middle">
                       <div class="content ">
-                          <h3 data-animation="animated fadeInUp">Real Capital Asset</h3>
+                          <h3 data-animation="animated fadeInUp">Real Capital Assets</h3>
                           <p data-animation="animated fadeInDown">The easiest and most secure way to invest in the future of money.</p>
                           <a href="/dashboard" class="thm-btn" data-animation="animated fadeInDown">Get Started</a>
                       </div>
@@ -141,16 +114,16 @@
   </div>
   <!-- Controls -->
   <a class="left carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
-      <i class="fa fa-angle-left"></i>
+      <i style="margin-top: 10px;" class="d-flex align-items-center justify-content-center fa fa-angle-left"></i>
       <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
-      <i class="fa fa-angle-right"></i>
+      <i style="margin-top: 10px;" class="fa fa-angle-right"></i>
       <span class="sr-only">Next</span>
   </a>
 
   <ul class="carousel-indicators list-inline custom-navigation">
-      <li data-target="#minimal-bootstrap-carousel" data-slide-to="0" class="active"></li><!--
+      <li  data-target="#minimal-bootstrap-carousel" data-slide-to="0" class="active"></li><!--
       --><li data-target="#minimal-bootstrap-carousel" data-slide-to="1"></li>
   </ul>
 </div>
@@ -637,7 +610,7 @@
 <div class="footer-bottom">
 <div class="thm-container clearfix">
   <div class="pull-left copy-text">
-    <p>&copy; 2021 Realcapitalassets. All copy rights are reserved.
+    <p>&copy; 2021 Realcapitalassets. All copy rights are reserved. Developed and designed by Witt<span style="color: plum">Stack</span>
                {{-- Powered by Witt<span style="color: plum;">Stack</span>--}}
               </p>
   </div><!-- /.pull-left copy-text -->
@@ -677,7 +650,7 @@
   </div><!-- /.sidebar-content -->
 </section><!-- /.hidden-sidebar -->
 
-<div class="scroll-to-top scroll-to-target" data-target="html"><i class="d-flex align-items-center fa fa-angle-up"></i></div>
+<div class="scroll-to-top scroll-to-target" data-target="html"><i style="margin-top: 15px;" class="d-flex align-items-center fa fa-angle-up"></i></div>
 
 <script src="/js/jquery.js"></script>
 
