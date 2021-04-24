@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -15,6 +16,9 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+URL::forceSchema('https');
+
 
 Route::get('/', function () {
     return view('index');
