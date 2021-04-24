@@ -2,7 +2,7 @@
 
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\URL;
+// use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -17,7 +17,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-URL::forceSchema('https');
+// URL::forceSchema('https');
 
 
 Route::get('/', function () {
