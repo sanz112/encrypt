@@ -39,7 +39,7 @@
           <div class="navbar-header">
               <button style="color: #fff !important" type="button" class="navbar-toggle collapsed bitmex-icon-menu" data-toggle="collapse" data-target=".main-navigation" aria-expanded="false"> </button>
               <a class="navbar-brand" href="#">
-                  <img src="/img/logo.jpg" alt="Awesome Image" width="100" heigh="100"/>
+                  <img src="/img/logo.jpg" alt="Awesome Image" width="50px" height="50px"/>
                   {{-- RealCapitalAssets --}}
               </a>
           </div>
@@ -197,7 +197,7 @@
     <div class="col-md-6">
       <div class="about-style-one-content">
         <span>Learn about us</span>
-        <h3>About RealCapitalAssets</h3>
+        <h3>About RCA</h3>
         <p>At Realcapitalassets we have profesional Forex Traders who will use their professional expertice to help you trade your Cryptocurrency in the stock market and make profits from %10 monthly, The more you invest the more profit you earn per day.</p>
         <a href="/dashboard" class="thm-btn yellow-bg-hvr">Get Started</a>
       </div><!-- /.about-style-one-content -->
@@ -333,7 +333,7 @@
             <div class="col-md-6 col-lg-4 item">
                 <div class="box">
                     <p class="description">
-                      RCA has helped me grow my finance in the past 2 years, while i focus on my business and family. 
+                      RCA has helped me grow my finance in the past 2 years, while i focus on my business and family.
                     </p>
                 </div>
                 <div class="author"><img class="rounded-circle" src="/img/testimonial/1.jpg">
@@ -425,7 +425,7 @@
     </div><!-- /.col-md-4 -->
   </div><!-- /.row -->
 </div><!-- /.thm-container -->
-</section><!-- /.team-style-one sec-pad --> 
+</section><!-- /.team-style-one sec-pad -->
 
 <section>
 <div class="containter d-flex justify-content-center">
@@ -444,7 +444,7 @@
       <span class="pricing-price">$500</span>
       <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
-    
+
     <div class="pricing-plan">
       <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
       <h2 class="pricing-header">Silver</h2>
@@ -455,7 +455,7 @@
       <span class="pricing-price">$1000</span>
       <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
-    
+
     <div class="pricing-plan">
       <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
       <h2 class="pricing-header">Gold</h2>
@@ -466,7 +466,7 @@
       <span class="pricing-price">$10000</span>
       <a href="{{url('dashboard/plan')}}" class="pricing-button">Get Plan</a>
     </div>
-    
+
   </div>
 </div>
 </section>
@@ -665,7 +665,7 @@
 <section class="hidden-sidebar side-navigation">
   <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
   <div class="sidebar-content">
-      <h3>Realcapitalassets</h3>
+      <h3>RCA</h3>
       <p>You can reach us on any of this </p>
       <p class="contact-info"><a href="mailto:realcapitalassets@gmail.com">realcapitalassets@gmail.com</a> <br /><span>Whatsapp: </span><a href="https://api.whatsapp.com/send?phone=+19784641094">+1 978 464 1094</a></p></p><!-- /.contact-info -->
       <div class="social">

@@ -22,21 +22,23 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="margin: 0;">
+<body>
 <main>
 <div class="container">
-    <div>
-    <div class="row">
-        <div   style="height: 100%; width: 100%; display:flex; justify-content: center; align-items: center;" class="col-md-12">
+    <div class="mt-5" style="height: 100%; width; 100%; margin-top; 10%; display:flex; justify-content: center; align-items: center;">
+        <div>
 
-            <div class="card">
-                {{-- <div class="card-header">{{ __('Login') }}</div> --}}
+            {{-- <div class="card">
+                {{-- <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body"> --}}
                     <h4 class="text-center">RealCapitalAssets</h4>
 
                     <style>
-
+                        body, main {
+                            margin: 0 auto;
+                            box-sizing: border-box;
+                        }
                         .form-control {
                             height: 40px;
                             box-shadow: none;
@@ -49,21 +51,22 @@
                             border-radius: 3px;
                         }
                         .signup-form {
-                            max-width: 600px;
-                            margin: 0 auto;
+                            max-width: 1000px;
+                            margin: 0;
                             padding: 30px 0;
                               font-size: 15px;
                         }
                         .signup-form h2 {
                             color: #636363;
-                            margin: 0 0 15px;
+                            margin: 0;
+                            font-size: 24px;
                             position: relative;
                             text-align: center;
                         }
                         .signup-form h2:before, .signup-form h2:after {
                             content: "";
                             height: 2px;
-                            width: 30%;
+                            width: 10%;
                             background: #d4d4d4;
                             position: absolute;
                             top: 50%;
@@ -84,9 +87,9 @@
                             color: #999;
                             border-radius: 3px;
                             margin-bottom: 15px;
-                            background: #f2f3f7;
+                            background: #ffffff;
                             box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-                            padding: 30px;
+                            padding: 10px;
                         }
                         .signup-form .form-group {
                             margin-bottom: 20px;
@@ -100,12 +103,12 @@
                             min-width: 140px;
                             outline: none !important;
                         }
-                        .signup-form .row div:first-child {
+                        /* .signup-form .row div:first-child {
                             padding-right: 10px;
                         }
                         .signup-form .row div:last-child {
                             padding-left: 10px;
-                        }
+                        } */
                         .signup-form a {
                             color: #fff;
                             text-decoration: underline;
@@ -165,8 +168,9 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+</div>
+        {{-- </div>
+    </div> --}}
 </main>
 </body>
 </html>
