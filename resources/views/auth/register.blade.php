@@ -42,10 +42,7 @@
 
 
                     <style>
-                        body, main {
-                            margin: 0 auto;
-                            box-sizing: border-box;
-                        }
+
                         .form-control {
                             height: 40px;
                             box-shadow: none;
@@ -135,10 +132,9 @@
 
 <div class="signup-form">
     <form method="POST" action="{{ route('register') }}">
-
+        @csrf
 		<h2>Register</h2>
         <p class="hint-text">Create your account. It's free and only takes a minute.</p>
-        @csrf
         <div class="form-group">
 			<div class="row">
                 <div class="col"><input  type="text" class="form-control @error('fname') is-invalid @enderror" id="fname" name="fname" placeholder="First Name">
@@ -218,6 +214,5 @@
                 </div>
             </div>
         </div>
-</main>
 </body>
 </html>

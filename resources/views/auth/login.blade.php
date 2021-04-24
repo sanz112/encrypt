@@ -35,18 +35,10 @@
 <div class="container">
     <div class="mt-5" style="height: 100%; width; 100%; margin-top; 10%; display:flex; justify-content: center; align-items: center;">
         <div>
-
-            {{-- <div class="card">
-                {{-- <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body"> --}}
                     <h4 class="text-center">RealCapitalAssets</h4>
 
                     <style>
-                        body, main {
-                            margin: 0 auto;
-                            box-sizing: border-box;
-                        }
+
                         .form-control {
                             height: 40px;
                             box-shadow: none;
@@ -134,10 +126,10 @@
                         </style>
                         <div class="signup-form">
                             <form method="POST" action="{{ route('login') }}">
-
+                                @csrf
                                 <h2>LogIn</h2>
                                 <p class="hint-text">Log into your account</p>
-                                @csrf
+
                                 <div class="form-group">
                                     <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Email">
                              @error('email')
@@ -177,9 +169,7 @@
                 </div>
             </div>
 </div>
-        {{-- </div>
-    </div> --}}
-</main>
+
 </body>
 </html>
 {{-- @endsection --}}
